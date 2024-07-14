@@ -1,0 +1,101 @@
+extends ./layouts/_default.pug
+
+block content
+    header.products-header.page-header
+        .container
+            .products-header__inner.page-header__inner
+                .products-box.page-header__inner__box
+                    img(src="/images/iso-photo.png" width="60" style="width:60px")
+                    h1 Productos #[span Disfruta de nuestra exclusiva línea de producción artística.]
+    section.fotobook-section
+        .container
+            .fotobook-section__inner
+                .fotobook-section__inner__title
+                    h2 Fotobook Online
+                    p Descarga y comparte desde tu laptop, tablet o smartphone todas tus sesiones de fotos con tu familia y amigos en cualquier momento.
+                .fotobook-content
+                    .fotobook-content__list
+                        ul
+                            li 
+                                | DISPONIBLE PARA ANDROID Y iPHONE
+                                <i class="icon-checkmark"></i>
+                            li 
+                                | ALMACENAMIENTO EN LA NUBE
+                                <i class="icon-checkmark"></i>
+                            li 
+                                | ACCESO TOTAL LAS 24 HRS.
+                                <i class="icon-checkmark"></i>
+                            li 
+                                | DESCARGAS ILIMITADAS
+                                <i class="icon-checkmark"></i>
+                    .fotobook-content__image
+                        img(src="/images/home/fotobook-online.png" alt="Fotobook")
+                p.fotobook-section__inner__text No te preocupes por el espacio, ni pierdas tus fotos más preciadas. Te ofrecemos alojamiento privado en la nube hasta por un año. Podrás descargar y compartir tu álbum, o solo tus fotos favoritas.
+    section.custom-section
+        .container
+            .custom-section__inner
+                h2 #[strong Pack Fondos Personalizados de] Pantalla
+                .custom-content
+                    img(src="/images/home/fondos-personalizados.png" alt="fondos personalizados")
+                    p Una exclusiva colección con increíbles fotos personalizadas y listas para instalarse como fondos de pantalla en todos tus dispositivos.
+    section.date-section
+        .container 
+            .date-section__inner
+                .date-section__inner__title
+                    h2 #[strong Pack Digital] Save The Date
+                    p Aprovecha el alcance de tus redes sociales para enviar los detalles de tu invitación, con diseños personalizados y disponibles en todos los formatos necesarios.
+                .date-box
+                    .date-box__item
+                        img(src="/images/productos/streaming.jpg" alt="Portada para live streaming")
+                        h3 PORTADA PARA LIVE STREAMING
+                    .date-box__item
+                        img(src="/images/productos/redes.jpg" alt="Invitación para redes")
+                        h3 INVITACIÓN PARA REDES
+                    .date-box__item
+                        img(src="/images/productos/historias.jpg" alt="Invitación para historias")
+                        h3 INVITACIÓN PARA HISTORIAS
+    section.art-section.bg-grey
+        .container
+            .art-section__inner
+                .art-section__inner__title
+                    h2 #[strong Pack]  Arte impreso
+                    p Decora tu recepción con lo más fino de nuestra línea de producción artística.
+                .art-content
+                    img(src="/images/home/arte-impreso.png" alt="Arte impreso")
+                    .art-content__text
+                        span.border
+                        span.border
+                        span.border
+                        span.border
+                        p Foto Wall - Lienzo de Bienvenida - Álbum de Firmas
+    
+    section.printed-section
+        .container 
+            .printed-section__inner
+                .printed-section__inner__title
+                    h2 Fotobook Impreso
+                    p Dale a tu hogar un toque decorativo muy personal, con los mejores momentos de tu boda presentados en un diseño único y elegante.
+                .printed-box
+                    .printed-box__item
+                        h3 IMPRESIÓN DE ALTA CALIDAD
+                        img(src="/images/productos/alta-calidad.jpg" alt="Impresión de alta calidad")
+                    .printed-box__item
+                        h3 DISEÑOS EXCLUSIVOS
+                        img(src="/images/productos/exclusivos.jpg" alt="Diseños exclusivos")
+                    .printed-box__item
+                        h3 VARIEDAD DE TAMAÑOS
+                        img(src="/images/productos/variedad.jpg" alt="Variedad de tamaños")
+                p.printed-section__inner__text Disfruta del arte que brota en cada página.
+    section.decorative-section
+        .container
+            .decorative-section__inner
+                .decorative-section__inner__title
+                    h2 #[strong Cuadros]  Decorativos
+                    p Una ventana hacia los momentos más bellos de tu boda.
+                .decorative-content
+                    .decorative-content__left
+                        img(src="/images/productos/decorativos-1.jpg" alt="Decorativos")
+                    .decorative-content__right
+                        img(src="/images/productos/decorativos-2.jpg" alt="Decorativos")
+                        img(src="/images/productos/decorativos-3.jpg" alt="Decorativos")
+                    

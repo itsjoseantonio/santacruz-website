@@ -1,0 +1,60 @@
+extends ./layouts/_default.pug
+
+block content
+    header.indoor-header.page-header
+        .container
+            .indoor-header__inner.page-header__inner
+                .indoor-box.page-header__inner__box
+                    img(src="/images/iso-photo.png" width="60" style="width:60px")
+                    h1 Indoor
+    section.indoor-main-section
+        .container
+            .indoor-main-section__inner
+                .indoor-box
+                    .indoor-box__image
+                        .indoor-box__image__left
+                            img(src="/images/indoor/main-indoor-1.jpg")
+                        .indoor-box__image__right
+                            img(src="/images/indoor/main-indoor-2.jpg")
+                    .indoor-box__text
+                        p La sesión #[strong Indoor] es uno de los momentos favoritos de las novias. Imagina un acogedor ambiente, esperándote para completar el retrato perfecto antes de caminar hacia el altar. Ahora, imagínalo después de que nosotros lo transformemos en arte.
+    section.gallery-indoor
+        .container
+            .gallery-indoor__content
+                .gallery-general
+                    .gallery-general__left
+                        .gallery-general__left__item
+                            img(src="/images/indoor/photo1.jpg" alt="Gallery")
+                        .gallery-general__left__item
+                            img(src="/images/indoor/photo2.jpg" alt="Gallery")
+                    .gallery-general__right
+                        .gallery-general__right__item
+                            img(src="/images/indoor/photo3.jpg" alt="Gallery")
+                        .gallery-general__right__item
+                            img(src="/images/indoor/photo4.jpg" alt="Gallery")
+                            p Esta sesión puede durar entre 30 y 45 minutos. La emoción que sentirás al ver las imágenes, es para toda la vida.
+                .gallery-general
+                    .gallery-general__full
+                        img(src="/images/indoor/photo5.jpg" alt="Gallery")
+                .gallery-general
+                    .gallery-general__left
+                        .gallery-general__left__item
+                            img(src="/images/indoor/photo6.jpg" alt="Gallery")
+                    .gallery-general__right
+                        .gallery-general__right__item
+                            img(src="/images/indoor/photo7.jpg" alt="Gallery")
+    section.alsolike-section
+        .container
+            .alsolike-section__inner
+                .alsolike-box
+                    h2 También te puede interesar
+                    .alsolike-box__content
+                        a(href="/proboda.html").alsolike-box__content__item
+                            img(src="/images/preboda.jpg" alt="Preboda")
+                            h3 Sesiones Preboda
+                        a(href="/indoor.html").alsolike-box__content__item
+                            img(src="/images/makeup.jpg" alt="Makeup")
+                            h3 Sesiones Makeup
+                        a(href="/outdoor.html").alsolike-box__content__item
+                            img(src="/images/outdoor.jpg" alt="Outdoor")
+                            h3 Sesiones Outdoor

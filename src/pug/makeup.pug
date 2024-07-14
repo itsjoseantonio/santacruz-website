@@ -1,0 +1,78 @@
+extends ./layouts/_default.pug
+
+block content
+    header.makeup-header.page-header
+        .container
+            .makeup-header__inner.page-header__inner
+                .makeup-box.page-header__inner__box
+                    img(src="/images/iso-photo.png" width="60" style="width:60px")
+                    h1 Makeup
+    section.makeup-main-section
+        .container
+            .makeup-main-section__inner
+                .makeup-box
+                    .makeup-box__image
+                        .makeup-box__image__left
+                            img(src="/images/makeup/main-makeup-1.jpg")
+                        .makeup-box__image__right
+                            img(src="/images/makeup/main-makeup-2.jpg")
+                    .makeup-box__text
+                        p Cada sesión #[strong Makeup] es una historia de color y belleza. Es el episodio donde revelamos la hermosura de la novia, como si fuera un lienzo que manifiesta su gracia y elegancia en cada pincelada.
+
+    section.gallery-women
+        .container 
+            .gallery-women__content
+                .gallery-general
+                    .gallery-general__left
+                        .gallery-general__left__item
+                            img(src="/images/makeup/photo1.jpg" alt="Gallery")
+                        .gallery-general__left__item
+                            img(src="/images/makeup/photo2.jpg" alt="Gallery")
+                        .gallery-general__left__item
+                            img(src="/images/makeup/photo3.jpg" alt="Gallery")
+                            p Esta sesión es el pnto de inicio en el día de tu boda. Puede durar entre 60 y 90 minutos.
+                        .gallery-general__left__item
+                            img(src="/images/makeup/photo4.jpg" alt="Gallery")
+                    .gallery-general__right
+                        .gallery-general__right__item
+                            img(src="/images/makeup/photo5.jpg" alt="Gallery")
+                        .gallery-general__right__item
+                            img(src="/images/makeup/photo6.jpg" alt="Gallery")
+                        .gallery-general__right__item
+                            img(src="/images/makeup/photo7.jpg" alt="Gallery")
+                            p Mientras tu maquillaje avanza, recreamos un elegante escenario, para fotografiar tu outfit y accesorios
+                        .gallery-general__right__item
+                            img(src="/images/makeup/photo8.jpg" alt="Gallery")
+    section.gallery-men
+        .container 
+            .gallery-men__content
+                .gallery-general
+                    .gallery-general__full
+                        img(src="/images/makeup/photo9.jpg" alt="Gallery")
+                        p El tiempo con los caballeros puede tomarnos entre 30 y 45 minutos de nuestro reloj. Para la mayoría de parejas, empezar la sesión con el novio, es la opción más práctica.
+                .gallery-general
+                    .gallery-general__left
+                        .gallery-general__left__item
+                            img(src="/images/makeup/photo10.jpg" alt="Gallery")
+                        .gallery-general__left__item
+                            img(src="/images/makeup/photo11.jpg" alt="Gallery")
+                    .gallery-general__right
+                        .gallery-general__right__item
+                            img(src="/images/makeup/photo12.jpg" alt="Gallery")
+                        .gallery-general__right__item
+                            img(src="/images/makeup/photo13.jpg" alt="Gallery")
+    section.alsolike-section
+        .container
+            .alsolike-section__inner
+                .alsolike-box
+                    h2 También te puede interesar
+                    .alsolike-box__content
+                        a(href="/proboda.html").alsolike-box__content__item
+                            img(src="/images/preboda.jpg" alt="Preboda")
+                            h3 Sesiones Preboda
+                        a(href="/indoor.html").alsolike-box__content__item
+                            img(src="/images/indoor.jpg" alt="Indoor")
+                            h3 Sesiones Indoor
+                        a(href="/outdoor").alsolike-box__content__item
+                            img(src="/images/outdoor.jpg" alt="Indoor")
+                            h3 Sesiones Outdoor

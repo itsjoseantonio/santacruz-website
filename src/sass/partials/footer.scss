@@ -1,0 +1,118 @@
+.footer {
+    background-color: $shadow-blue;
+    color: $white;
+    padding: 35px 0 25px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+
+    .footer-content {
+        display: flex;
+        max-width: 992px;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 45px;
+        flex-wrap: wrap;
+
+        @include max-tablet {
+            flex-direction: column;
+            width: 80%;
+        }
+
+        &__qr {
+            flex-grow: 1;
+            padding: 0 40px;
+            flex-basis: 250px;
+            text-align: center;
+
+            @include max-tablet {
+                flex-basis: auto;
+                padding: 30px 0px;
+                border-bottom: 1px solid $white;
+                text-align: left;
+            }
+
+            img {
+                width: 150px;
+            }
+        }
+
+        &__contact {
+            flex-grow: 2;
+            padding: 0 50px;
+            border-left: 1px solid $white;
+            border-right: 1px solid $white;
+
+            @include max-tablet {
+                flex-basis: auto;
+                padding: 30px 0px;
+                border-right: 0;
+                border-left: 0;
+            }
+
+            p {
+                margin-bottom: 30px;
+                font-size: 14px;
+            }
+
+            ul {
+                li {
+                    margin-bottom: 15px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    a {
+                        color: $white;
+                        font-size: 14px;
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+
+                        i {
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__follow {
+            padding: 0 40px;
+            flex-grow: 1;
+            flex-basis: 250px;
+
+            @include max-tablet {
+                flex-direction: column;
+                display: flex;
+                align-items: flex-end;
+                flex-basis: auto;
+            }
+
+            p {
+                margin-bottom: 30px;
+                font-size: 14px;
+            }
+
+            ul {
+                display: flex;
+                gap: 15px;
+
+                li {
+                    a {
+                        color: $white;
+                        font-size: 44px;
+                    }
+                }
+            }
+        }
+    }
+
+    .copy {
+        font-size: 12px;
+        text-align: center;
+        opacity: 0.7;
+        letter-spacing: 2px;
+        font-family: 'montserrat-light';
+    }
+}

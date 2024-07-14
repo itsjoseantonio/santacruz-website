@@ -1,0 +1,230 @@
+extends ./layouts/_default.pug
+
+block content
+	include ./partials/_navbar.pug
+
+	header.home-header
+		.home-header__inner
+			.home-header__logo
+				img(src="/images/icons/logo-white.png" alt="Santa Cruz")
+			.home-header__quote
+				span.border
+				span.border
+				span.border
+				span.border
+				p No tomamos fotos, #[span tomamos en serio cada detalle]
+	main
+		section.quote-section
+			.container
+				.quote-section__inner
+					.quote-image
+						.quote-image__inner
+							img(src="/images/home/quote-photo.png" alt="")
+							p es cierto, #[strong no tomamos] #[span fotos], es decir, #[small no como la mayoría]
+						p.quote-image__caption ¡Felicidades! vas a casarte con la persona que siempre soñaste, y si estás aquí, es porque el día de tu boda mereces imágenes que muestren mucho más que lo habitual. Estás aquí para soñar, para sonreír y compartir felicidad con tu familia y amigos. Y claro, nosotros estamos aquí, para que disfrutes de una experiencia irrepetible que llamamos fotografía de bodas.
+
+		section.wedding-section
+			.container
+				.wedding-section__inner
+					.wedding-image
+						img(src="/images/home/wedding-photo-1.png")
+						.wedding-image__text
+							p FOTOGRAFIAMOS #[strong BODAS] Porque la única forma de capturar el amor, es a través de una cámara.
+						img(src="/images/home/wedding-photo-2.png")
+		
+		section.weare-section
+			.container
+				.weare-section__inner
+					.weare-box
+						.weare-box__inner
+							.weare-box__inner__content
+								.weare-description
+									.weare-description__top
+										p Hola, somos #[span Juan Pablo & Elizabeth] Santa Cruz
+										img(src="/images/iso-photo.png")
+									.weare-description__bottom
+										p Nos casamos en 2022, con el deseo de crear una marca capaz de cambiar el proceso habitual de hacer fotografía de bodas. Además, sabemos bien lo que es estar en tus zapatos.
+										p ¡Sobre todo en los de la novia!
+								.weare-description-mobile
+									p #[span Hola,] #[span somos] Juan Pablo & Elizabeth Santa Cruz
+									img(src="/images/iso-photo.png")
+						.weare-box__textMobile
+							p Nos casamos en 2022, con el deseo de crear una marca capaz de cambiar el proceso habitual de hacer fotografía de bodas. Además, sabemos bien lo que es estar en tus zapatos.
+							p ¡Sobre todo en los de la novia!
+		section.shine-section
+			.container
+				.shine-section__inner
+					.shine-box
+						.shine-box__title
+							p BRILLA
+						.shine-box__subtitle
+							p Obtén una Sesión de Asesoría Fotográfica Gratuita.
+						.shine-box__contact
+							p Escríbenos para agendar una #[span fecha disponible, y descubre como] #[strong lucir increíble] en cada foto.
+							ul
+								li
+									a(href="/" target="_blank") 
+										img(src="/images/icons/icon-whatsapp.png", alt="")
+								li
+									a(href="/" target="_blank")
+										img(src="/images/icons/icon-mail.png", alt="")
+								li
+									a(href="/" target="_blank")
+										img(src="/images/icons/icon-msn.png", alt="")
+		section.fav-section.header-title
+			h2 LOS FAVORITOS DE NUESTROS CLIENTES
+			p Explora lo más destacado de nuestra línea de producción artística
+		
+		section.fotobook-section
+			.container
+				.fotobook-section__inner
+					.fotobook-section__inner__title
+						h2 Fotobook Online
+						p Descarga y comparte desde tu laptop, tablet o smartphone todas tus sesiones de fotos con tu familia y amigos en cualquier momento.
+					.fotobook-content
+						.fotobook-content__list
+							ul
+								li 
+									| DISPONIBLE PARA ANDROID Y iPHONE
+									<i class="icon-checkmark"></i>
+								li 
+									| ALMACENAMIENTO EN LA NUBE
+									<i class="icon-checkmark"></i>
+								li 
+									| ACCESO TOTAL LAS 24 HRS.
+									<i class="icon-checkmark"></i>
+								li 
+									| DESCARGAS ILIMITADAS
+									<i class="icon-checkmark"></i>
+						.fotobook-content__image
+							img(src="/images/home/fotobook-online.png" alt="Fotobook")
+					p.fotobook-section__inner__text No te preocupes por el espacio, ni pierdas tus fotos más preciadas. Te ofrecemos alojamiento privado en la nube hasta por un año. Podrás descargar y compartir tu álbum, o solo tus fotos favoritas.
+		section.custom-section
+			.container
+				.custom-section__inner
+					h2 #[strong Pack Fondos Personalizados de] Pantalla
+					.custom-content
+						img(src="/images/home/fondos-personalizados.png" alt="fondos personalizados")
+						p Una exclusiva colección con increíbles fotos personalizadas y listas para instalarse como fondos de pantalla en todos tus dispositivos.
+		section.art-section
+			.container
+				.art-section__inner
+					.art-section__inner__title
+						h2 #[strong Pack]  Arte impreso
+						p Decora tu recepción con lo más fino de nuestra línea de producción artística.
+					.art-content
+						img(src="/images/home/arte-impreso.png" alt="Arte impreso")
+						.art-content__text
+							span.border
+							span.border
+							span.border
+							span.border
+							p Foto Wall - Lienzo de Bienvenida - Álbum de Firmas
+		
+		section.client-section
+			.header-title
+				h2 LO QUE NUESTROS CLIENTES OPINAN
+			.container
+				.client-section__inner
+					.client-list
+						.client-list__item
+							h3 Grecia & Adolfo
+							p Lograron que uno de los momentos más importantes de nuestras vidas, quede capturado en bellas imágenes con la confianza y amabilidad que nos presentaron desde el primer día hasta el final de toda esta aventura.
+						.client-list__item
+							h3 Yenn & Moises
+							p Nos sentimos comprendidos en todo tiempo, y nos ayudaron mucho con sus ideas creativas. Su forma de conseguir la foto perfecta nos entusiasmó. La paciencia los caracteriza.
+						.client-list__item
+							h3 Mariel y Carlos
+							p Me encantó que tengan paciencia para las sesiones de fotos y te brinden distintas opciones para que te sientas más cómoda. Muy profesionales y puntuales para la entrega del trabajo. Súper recomendados.
+
+		section.enjoy-section
+			.container
+				.enjoy-section__inner
+					p #[strong.first DISFRUTA] de cada instante #[strong MIENTRAS HACEMOS] #[strong TODO POR TI.]
+		
+		section.howdo-section
+			.header-title
+				h2 ¿CÓMO HACEMOS LO QUE HACEMOS?
+			.container
+				.howdo-section__inner
+					.howdo-content
+						.howdo-content__img
+							img(src="/images/home/como-hacemos.jpg")
+						.howdo-content__text
+							p De la misma forma en que todo expresa armonía en la naturaleza, comprueba como cada paquete que diseñamos para ti, se complementa con cada una de las 4 estaciones de nuestra plataforma creativa.
+						.howdo-content__logo
+							img(src="/images/icons/logo-green.png" alt="Santa Cruz")
+		section.packages-section
+			.container
+				.packages-section__inner
+					h2 Nuestros paquetes
+					.packages-list
+						.packages-list__item
+							h3 encanto
+							.packages-list__item__detail
+								p Asesoría Fotográfica 
+								p Sesión Pre Boda 
+								p Boda Religiosa 
+								p Boda Civil 
+								p 1 Fotógrafo 
+								p Edición de Fotos 
+								p Fotobook Digital (1 Mes)
+						.packages-list__item
+							h3 ensueño
+							.packages-list__item__detail
+								p Asesoría Fotográfica 
+								p Sesión Pre Boda 
+								p Boda Civil 
+								p Boda Religiosa 
+								p 2 Fotógrafos 
+								p Edición de Fotos 
+								p Fotobook Impreso (21 x 21) 
+								p Fotobook Digital (3 meses) 
+								p Pack Fondos Personalizados de Pantalla
+						.packages-list__item
+							h3 esplendor
+							.packages-list__item__detail
+								p Asesoría Fotográfica 
+								p Sesión Pre Boda 
+								p Boda Civil 
+								p Boda Religiosa 
+								p 2 Fotógrafos 
+								p Pack Arte Impreso (Lienzo de Bienvenida, Foto Wall, Álbum de Firmas) 
+								p Edición de Fotos 
+								p Retoque Digital 
+								p Fotobook Impreso (30 x 30) 
+								p Fotobook Digital (6 meses) 
+								p Pack Fondos Personalizados de Pantalla
+					.packages-contact
+						p CONVERSEMOS
+						ul
+							li
+								a(href="/" target="_blank") 
+									img(src="/images/icons/icon-whatsapp.png", alt="whatsapp")
+							li
+								a(href="/" target="_blank")
+									img(src="/images/icons/icon-mail.png", alt="mail")
+							li
+								a(href="/" target="_blank")
+									img(src="/images/icons/icon-msn.png", alt="msn")
+		section.contact-section
+			.container
+				.contact-section__inner
+					.contact-box
+						.contact-box__inner
+							.contact-box__inner__content
+								.contact-box__inner__content__text
+									span Estuvimos esperando este día tanto como tú.
+									strong ¿POR QUÉ ESPERAR MÁS?
+									ul
+										li
+											a(href="/" target="_blank") 
+												img(src="/images/icons/icon-whatsapp.png", alt="whatsapp")
+										li
+											a(href="/" target="_blank")
+												img(src="/images/icons/icon-mail.png", alt="mail")
+										li
+											a(href="/" target="_blank")
+												img(src="/images/icons/icon-msn.png", alt="msn")
+									p Escríbenos o llámanos
+									strong.number 982-141-940

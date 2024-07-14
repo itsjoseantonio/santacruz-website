@@ -1,0 +1,72 @@
+extends ./layouts/_default.pug
+
+block content
+    header.outdoor-header.page-header
+        .container
+            .outdoor-header__inner.page-header__inner
+                .outdoor-box.page-header__inner__box
+                    img(src="/images/iso-photo.png" width="60" style="width:60px")
+                    h1 Outdoor
+    section.outdoor-main-section
+        .container
+            .outdoor-main-section__inner
+                .outdoor-box
+                    .outdoor-box__image
+                        .outdoor-box__image__left
+                            img(src="/images/outdoor/main-outdoor-1.jpg")
+                        .outdoor-box__image__right
+                            img(src="/images/outdoor/main-outdoor-2.jpg")
+                    .outdoor-box__text
+                        p Después de la ceremonia, el capítulo más romántico de toda esta aventura, lo podrás disfrutar solo en una sesión #[strong Outdoor].
+    section.gallery-outdoor
+        .container
+            .gallery-outdoor__content
+                .gallery-general
+                    .gallery-general__left.group-1
+                        .gallery-general__left__item
+                            img(src="/images/outdoor/photo1.jpg" alt="Gallery")
+                            p Esta sesión puede durar entre 30 y 45 minutos.
+                    .gallery-general__right.group-1
+                        .gallery-general__right__item
+                            img(src="/images/outdoor/photo2.jpg" alt="Gallery")
+                .gallery-general
+                    .gallery-general__col-50
+                        .gallery-general__image
+                            img(src="/images/outdoor/photo3.jpg" alt="Gallery")
+                        .gallery-general__image
+                            img(src="/images/outdoor/photo4.jpg" alt="Gallery")
+                    .gallery-general__col-25
+                        .gallery-general__image
+                            img(src="/images/outdoor/photo5.jpg" alt="Gallery")
+                    .gallery-general__col-25
+                        .gallery-general__image
+                            img(src="/images/outdoor/photo6.jpg" alt="Gallery")
+                            p Te presentamos los escenarios más cercanos al lugar de tu boda. Definimos la ruta más rápida y tomamos en cuenta el clima y la hora del día para obtener la mejor iluminación posible.
+                .gallery-general
+                    .gallery-general__left.group-3
+                        .gallery-general__left__item
+                            img(src="/images/outdoor/photo7.jpg" alt="Gallery")
+                    .gallery-general__right.group-3
+                        .gallery-general__right__item
+                            img(src="/images/outdoor/photo8.jpg" alt="Gallery")
+                .gallery-general
+                    .gallery-general__full
+                        img(src="/images/outdoor/photo9.jpg" alt="Gallery")
+                .gallery-general
+                    .gallery-general__full
+                        img(src="/images/outdoor/photo10.jpg" alt="Gallery")
+    section.alsolike-section
+        .container
+            .alsolike-section__inner
+                .alsolike-box
+                    h2 También te puede interesar
+                    .alsolike-box__content
+                        a(href="/proboda.html").alsolike-box__content__item
+                            img(src="/images/preboda.jpg" alt="Preboda")
+                            h3 Sesiones Preboda
+                        a(href="/indoor.html").alsolike-box__content__item
+                            img(src="/images/makeup.jpg" alt="Makeup")
+                            h3 Sesiones Makeup
+                        a(href="/indoor.html").alsolike-box__content__item
+                            img(src="/images/indoor.jpg" alt="Indoor")
+                            h3 Sesiones Indoor

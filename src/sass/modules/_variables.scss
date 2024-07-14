@@ -1,0 +1,53 @@
+/* large desktop */
+$desktop-lg-min: 1400px;
+/* normal desktop range */
+$desktop-max: 1366px;
+$desktop-min: 1025px;
+/* tablet range */
+$tablet-max: 1024px;
+$tablet-min: 768px;
+/* mopbile range */
+$mobile-max: 767px;
+$mobile-min: 320px;
+
+/*
+* Colors
+*/
+$white: #fff;
+$shadow-blue: #7e909e;
+$light-grey: #f3f3f3;
+$beryl-green: #dcdcaf;
+$black: #000;
+$isabelline: #f2f1ef;
+$onyx: #363538;
+$gray: #d8cfd0;
+
+/*
+* Variables for breakpoints
+*/
+$xs: 320px;
+$sm: 580px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+/*
+* Map for breakpoints
+*/
+$breakpoints: (
+    'extra-small': (
+        min-width: $xs,
+    ),
+    'small': (
+        min-width: $sm,
+    ),
+    'medium': (
+        min-width: $md,
+    ),
+    'large': (
+        min-width: $lg,
+    ),
+    'extra-large': (
+        min-width: $xl,
+    ),
+);

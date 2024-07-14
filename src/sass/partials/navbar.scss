@@ -1,0 +1,52 @@
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 40px 0;
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @include max-tablet {
+            display: none;
+        }
+
+        li {
+            position: relative;
+
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                height: 100%;
+                border: 0;
+                border-right: 1px solid $white;
+                right: 0;
+                top: 0;
+            }
+
+            a {
+                text-transform: uppercase;
+                color: $white;
+                display: inline-block;
+                font-family: 'montserrat-light';
+                font-size: 14px;
+                letter-spacing: 3px;
+                padding: 0px 25px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

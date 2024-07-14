@@ -1,0 +1,75 @@
+.familia-header {
+    &__inner {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+.familia-main-section {
+    padding: 40px 0 80px;
+    background-color: $light-grey;
+
+    &__inner {
+        .familia-box {
+            max-width: 600px;
+            margin: 0 auto;
+
+            &__image {
+                display: flex;
+                gap: 10px;
+                margin-bottom: 10px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            &__text {
+                color: $shadow-blue;
+
+                p {
+                    font-size: 18px;
+                    line-height: 24px;
+
+                    strong {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.gallery-familia {
+    padding: 20px 0 120px;
+
+    &__content {
+        max-width: 750px;
+        margin: 0 auto;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+
+        .gallery-general {
+            &__left {
+                &.group-1 {
+                    flex-basis: 70%;
+                }
+
+                &.group-3 {
+                    flex-basis: 40%;
+                }
+            }
+
+            &__right {
+                &.group-1 {
+                    flex-basis: 30%;
+                }
+
+                &.group-3 {
+                    flex-basis: 60%;
+                }
+            }
+        }
+    }
+}

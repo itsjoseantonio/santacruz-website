@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'modules/variables';
+@import 'modules/mixins';
+@import 'modules/fonts';
+@import 'modules/common';
+@import 'partials/navbar';
+@import 'partials/footer';
+@import 'pages/index';
+@import 'pages/servicios';
+@import 'pages/preboda';
+@import 'pages/makeup';
+@import 'pages/indoor';
+@import 'pages/outdoor';
+@import 'pages/familia';
+@import 'pages/productos';
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
