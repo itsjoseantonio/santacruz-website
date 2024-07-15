@@ -10,6 +10,10 @@
     background-color: $light-grey;
 
     &__inner {
+        @include max-phone {
+            padding: 0 20px;
+        }
+
         .indoor-box {
             max-width: 650px;
             margin: 0 auto;
@@ -28,6 +32,9 @@
                 }
 
                 &__right {
+                    @include max-phone {
+                        display: none;
+                    }
                     img {
                         width: 100%;
                     }
@@ -60,13 +67,44 @@
         gap: 10px;
         flex-direction: column;
 
+        @include max-phone {
+            gap: 20px;
+        }
+
         .gallery-general {
+            @include max-phone {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            p {
+                @include max-phone {
+                    font-size: 20px;
+                    line-height: 24px;
+                    padding: 10px 20px;
+                }
+
+                @include max-phone {
+                    font-size: 16px;
+                    line-height: 20px;
+                    padding: 10px 0;
+                }
+            }
+
             &__left {
                 flex-basis: 65%;
+
+                @include max-phone {
+                    gap: 20px;
+                }
             }
 
             &__right {
                 flex-basis: 35%;
+
+                @include max-phone {
+                    gap: 20px;
+                }
             }
         }
     }

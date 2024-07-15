@@ -18,6 +18,10 @@
             width: 80%;
         }
 
+        @include max-phone {
+            width: 90%;
+        }
+
         &__qr {
             flex-grow: 1;
             padding: 0 40px;
@@ -29,6 +33,10 @@
                 padding: 30px 0px;
                 border-bottom: 1px solid $white;
                 text-align: left;
+            }
+
+            @include max-phone {
+                text-align: center;
             }
 
             img {
@@ -47,6 +55,11 @@
                 padding: 30px 0px;
                 border-right: 0;
                 border-left: 0;
+            }
+
+            @include max-phone {
+                text-align: center;
+                border-bottom: 1px solid $white;
             }
 
             p {
@@ -69,6 +82,10 @@
                         gap: 10px;
                         align-items: center;
 
+                        @include max-phone {
+                            flex-direction: column;
+                        }
+
                         i {
                             font-size: 24px;
                         }
@@ -89,6 +106,11 @@
                 flex-basis: auto;
             }
 
+            @include max-phone {
+                align-items: center;
+                padding-top: 20px;
+            }
+
             p {
                 margin-bottom: 30px;
                 font-size: 14px;
@@ -101,7 +123,7 @@
                 li {
                     a {
                         color: $white;
-                        font-size: 44px;
+                        font-size: 48px;
                     }
                 }
             }
@@ -114,5 +136,10 @@
         opacity: 0.7;
         letter-spacing: 2px;
         font-family: 'montserrat-light';
+
+        @include max-phone {
+            padding: 0 30px;
+            line-height: 16px;
+        }
     }
 }

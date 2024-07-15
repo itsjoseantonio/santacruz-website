@@ -37,6 +37,10 @@
     background-color: $light-grey;
 
     &__inner {
+        @include max-phone {
+            padding: 0 20px;
+        }
+
         .outdoor-box {
             max-width: 550px;
             margin: 0 auto;
@@ -55,6 +59,10 @@
                 }
 
                 &__right {
+                    @include max-phone {
+                        display: none;
+                    }
+
                     img {
                         width: 100%;
                     }
@@ -80,6 +88,10 @@
 .gallery-outdoor {
     padding: 20px 0 80px;
 
+    @include max-phone {
+        padding: 20px 0 40px;
+    }
+
     &__content {
         max-width: 750px;
         margin: 0 auto;
@@ -87,7 +99,36 @@
         gap: 10px;
         flex-direction: column;
 
+        @include max-tablet {
+            padding: 0 30px;
+            gap: 20px;
+        }
+
+        @include max-phone {
+            padding: 0px;
+            gap: 20px;
+        }
+
         .gallery-general {
+            @include max-tablet {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            p {
+                @include max-tablet {
+                    font-size: 20px;
+                    line-height: 24px;
+                    padding: 10px 10px;
+                }
+
+                @include max-phone {
+                    font-size: 16px;
+                    line-height: 20px;
+                    padding: 10px 0;
+                }
+            }
+
             &__left {
                 &.group-1 {
                     flex-basis: 45%;
@@ -105,6 +146,58 @@
 
                 &.group-3 {
                     flex-basis: 40%;
+                }
+            }
+
+            &__col-50 {
+                @include max-tablet {
+                    width: 100%;
+                    gap: 20px;
+                }
+            }
+
+            &__col-25 {
+                @include max-tablet {
+                    gap: 20px;
+                    width: 100%;
+                }
+
+                &.tablet-block {
+                    flex-direction: row;
+
+                    @include max-phone {
+                        flex-direction: column;
+                    }
+
+                    .gallery-general__image {
+                        @include max-tablet {
+                            width: 37%;
+                        }
+
+                        @include max-phone {
+                            width: 100%;
+                        }
+
+                        &:last-child {
+                            width: 63%;
+
+                            @include max-phone {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .hidden-tablet {
+                @include max-tablet {
+                    display: none;
+                }
+            }
+
+            .show-tablet {
+                @include min-desktop {
+                    display: none;
                 }
             }
         }

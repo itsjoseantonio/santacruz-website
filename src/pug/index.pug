@@ -18,10 +18,12 @@ block content
 			.container
 				.quote-section__inner
 					.quote-image
+						span.quote-image__left ❝
 						.quote-image__inner
 							img(src="/images/home/quote-photo.png" alt="")
 							p es cierto, #[strong no tomamos] #[span fotos], es decir, #[small no como la mayoría]
 						p.quote-image__caption ¡Felicidades! vas a casarte con la persona que siempre soñaste, y si estás aquí, es porque el día de tu boda mereces imágenes que muestren mucho más que lo habitual. Estás aquí para soñar, para sonreír y compartir felicidad con tu familia y amigos. Y claro, nosotros estamos aquí, para que disfrutes de una experiencia irrepetible que llamamos fotografía de bodas.
+						span.quote-image__right ❞
 
 		section.wedding-section
 			.container
@@ -104,7 +106,8 @@ block content
 				.custom-section__inner
 					h2 #[strong Pack Fondos Personalizados de] Pantalla
 					.custom-content
-						img(src="/images/home/fondos-personalizados.png" alt="fondos personalizados")
+						img(src="/images/home/fondos-personalizados.png" alt="fondos personalizados").desktop
+						img(src="/images/home/fondos-personalizados-mobile.png" alt="fondos personalizados").mobile
 						p Una exclusiva colección con increíbles fotos personalizadas y listas para instalarse como fondos de pantalla en todos tus dispositivos.
 		section.art-section
 			.container
@@ -120,6 +123,16 @@ block content
 							span.border
 							span.border
 							p Foto Wall - Lienzo de Bienvenida - Álbum de Firmas
+					.art-content-mobile
+						.art-content-mobile__item
+							img(src="/images/homequote-image/foto-wall.png" alt="Foto wall")
+							p Foto Wall
+						.art-content-mobile__item
+							img(src="/images/home/lienzo.png" alt="Lienzo de Bienvenida")
+							p Lienzo de Bienvenida
+						.art-content-mobile__item
+							img(src="/images/home/album.png" alt="Álbum de Firmas")
+							p Álbum de Firmas
 		
 		section.client-section
 			.header-title
@@ -149,7 +162,8 @@ block content
 				.howdo-section__inner
 					.howdo-content
 						.howdo-content__img
-							img(src="/images/home/como-hacemos.jpg")
+							img(src="/images/home/como-hacemos.jpg").desktop
+							img(src="/images/home/como-hacemos-mobile.jpg").mobile
 						.howdo-content__text
 							p De la misma forma en que todo expresa armonía en la naturaleza, comprueba como cada paquete que diseñamos para ti, se complementa con cada una de las 4 estaciones de nuestra plataforma creativa.
 						.howdo-content__logo

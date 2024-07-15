@@ -10,6 +10,10 @@
     background-color: $light-grey;
 
     &__inner {
+        @include max-phone {
+            padding: 0 20px;
+        }
+
         .familia-box {
             max-width: 600px;
             margin: 0 auto;
@@ -50,10 +54,56 @@
         gap: 10px;
         flex-direction: column;
 
+        @include max-tablet {
+            gap: 20px;
+        }
+
         .gallery-general {
+            @include max-tablet {
+                gap: 20px;
+            }
+
+            p {
+                @include max-tablet {
+                    font-size: 20px;
+                    line-height: 24px;
+                    padding: 10px 0;
+                }
+
+                @include max-phone {
+                    font-size: 16px;
+                    line-height: 20px;
+                    padding: 10px 0;
+                }
+            }
+
+            &.col-50 {
+                @include max-phone {
+                    flex-direction: column;
+                }
+
+                .gallery-general__left {
+                    flex-basis: 50%;
+
+                    @include max-phone {
+                        flex-basis: 100%;
+                    }
+                }
+
+                .gallery-general__right {
+                    flex-basis: 50%;
+
+                    @include max-phone {
+                        flex-basis: 100%;
+                    }
+                }
+            }
             &__left {
                 &.group-1 {
                     flex-basis: 70%;
+                    @include max-tablet {
+                        flex-basis: 100%;
+                    }
                 }
 
                 &.group-3 {
@@ -68,6 +118,24 @@
 
                 &.group-3 {
                     flex-basis: 60%;
+
+                    @include max-tablet {
+                        flex-basis: 100%;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                    }
+                }
+            }
+
+            .hidden-tablet {
+                @include max-tablet {
+                    display: none;
+                }
+            }
+
+            .show-tablet {
+                @include min-desktop {
+                    display: none;
                 }
             }
         }
