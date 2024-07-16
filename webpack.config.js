@@ -17,7 +17,9 @@ module.exports = (env, argv) => {
     const _gParams = {
         FILE_PREFIX: argv.mode === 'production' ? '/dist/' : '/',
         IMG_PREFIX_URL:
-            argv.mode === 'production' ? 'https://soarlin.github.io/' : '/',
+            argv.mode === 'production'
+                ? 'https://itsjoseantonio.github.io/santacruz-website/dist/'
+                : '/',
     };
 
     var config = {

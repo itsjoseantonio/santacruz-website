@@ -1,11 +1,14 @@
 extends ./layouts/_default.pug
 
+block variables
+    - var imgPrefixUrl = IMG_PREFIX_URL
+
 block content
     header.products-header.page-header
         .container
             .products-header__inner.page-header__inner
                 .products-box.page-header__inner__box
-                    img(src="/images/iso-photo.png" width="60" style="width:60px")
+                    img(src=imgPrefixUrl+"images/iso-photo.png" width="60" style="width:60px")
                     h1 Productos #[span Disfruta de nuestra exclusiva línea de producción artística.]
     section.fotobook-section.bg-grey
         .container
@@ -29,14 +32,14 @@ block content
                                 | DESCARGAS ILIMITADAS
                                 <i class="icon-checkmark"></i>
                     .fotobook-content__image
-                        img(src="/images/home/fotobook-online.png" alt="Fotobook")
+                        img(src=imgPrefixUrl+"images/home/fotobook-online.png" alt="Fotobook")
                 p.fotobook-section__inner__text No te preocupes por el espacio, ni pierdas tus fotos más preciadas. Te ofrecemos alojamiento privado en la nube hasta por un año. Podrás descargar y compartir tu álbum, o solo tus fotos favoritas.
     section.custom-section.bg-white
         .container
             .custom-section__inner
                 h2 #[strong Pack Fondos Personalizados de] Pantalla
                 .custom-content
-                    img(src="/images/home/fondos-personalizados.png" alt="fondos personalizados")
+                    img(src=imgPrefixUrl+"images/home/fondos-personalizados.png" alt="fondos personalizados")
                     p Una exclusiva colección con increíbles fotos personalizadas y listas para instalarse como fondos de pantalla en todos tus dispositivos.
     section.date-section
         .container 
@@ -46,13 +49,13 @@ block content
                     p Aprovecha el alcance de tus redes sociales para enviar los detalles de tu invitación, con diseños personalizados y disponibles en todos los formatos necesarios.
                 .date-box
                     .date-box__item
-                        img(src="/images/productos/streaming.jpg" alt="Portada para live streaming")
+                        img(src=imgPrefixUrl+"images/productos/streaming.jpg" alt="Portada para live streaming")
                         h3 PORTADA PARA LIVE STREAMING
                     .date-box__item
-                        img(src="/images/productos/redes.jpg" alt="Invitación para redes")
+                        img(src=imgPrefixUrl+"images/productos/redes.jpg" alt="Invitación para redes")
                         h3 INVITACIÓN PARA REDES
                     .date-box__item
-                        img(src="/images/productos/historias.jpg" alt="Invitación para historias")
+                        img(src=imgPrefixUrl+"images/productos/historias.jpg" alt="Invitación para historias")
                         h3 INVITACIÓN PARA HISTORIAS
     section.art-section.bg-grey
         .container
@@ -61,7 +64,7 @@ block content
                     h2 #[strong Pack]  Arte impreso
                     p Decora tu recepción con lo más fino de nuestra línea de producción artística.
                 .art-content
-                    img(src="/images/home/arte-impreso.png" alt="Arte impreso")
+                    img(src=imgPrefixUrl+"images/home/arte-impreso.png" alt="Arte impreso")
                     .art-content__text
                         span.border
                         span.border
@@ -78,13 +81,13 @@ block content
                 .printed-box
                     .printed-box__item
                         h3 IMPRESIÓN DE ALTA CALIDAD
-                        img(src="/images/productos/alta-calidad.jpg" alt="Impresión de alta calidad")
+                        img(src=imgPrefixUrl+"images/productos/alta-calidad.jpg" alt="Impresión de alta calidad")
                     .printed-box__item
                         h3 DISEÑOS EXCLUSIVOS
-                        img(src="/images/productos/exclusivos.jpg" alt="Diseños exclusivos")
+                        img(src=imgPrefixUrl+"images/productos/exclusivos.jpg" alt="Diseños exclusivos")
                     .printed-box__item
                         h3 VARIEDAD DE TAMAÑOS
-                        img(src="/images/productos/variedad.jpg" alt="Variedad de tamaños")
+                        img(src=imgPrefixUrl+"images/productos/variedad.jpg" alt="Variedad de tamaños")
                 p.printed-section__inner__text Disfruta del arte que brota en cada página.
     section.decorative-section
         .container
@@ -94,8 +97,8 @@ block content
                     p Una ventana hacia los momentos más bellos de tu boda.
                 .decorative-content
                     .decorative-content__left
-                        img(src="/images/productos/decorativos-1.jpg" alt="Decorativos")
+                        img(src=imgPrefixUrl+"images/productos/decorativos-1.jpg" alt="Decorativos")
                     .decorative-content__right
-                        img(src="/images/productos/decorativos-2.jpg" alt="Decorativos")
-                        img(src="/images/productos/decorativos-3.jpg" alt="Decorativos")
+                        img(src=imgPrefixUrl+"images/productos/decorativos-2.jpg" alt="Decorativos")
+                        img(src=imgPrefixUrl+"images/productos/decorativos-3.jpg" alt="Decorativos")
                     

@@ -1,12 +1,15 @@
 extends ./layouts/_default.pug
 
+block variables
+	- var imgPrefixUrl = IMG_PREFIX_URL
+
 block content
 	include ./partials/_navbar.pug
 
 	header.home-header
 		.home-header__inner
 			.home-header__logo
-				img(src="/images/icons/logo-white.png" alt="Santa Cruz")
+				img(src=imgPrefixUrl+"images/icons/logo-white.png" alt="Santa Cruz")
 			.home-header__quote
 				span.border
 				span.border
@@ -20,7 +23,7 @@ block content
 					.quote-image
 						span.quote-image__left ❝
 						.quote-image__inner
-							img(src="/images/home/quote-photo.png" alt="")
+							img(src=imgPrefixUrl+"images/home/quote-photo.png" alt="")
 							p es cierto, #[strong no tomamos] #[span fotos], es decir, #[small no como la mayoría]
 						p.quote-image__caption ¡Felicidades! vas a casarte con la persona que siempre soñaste, y si estás aquí, es porque el día de tu boda mereces imágenes que muestren mucho más que lo habitual. Estás aquí para soñar, para sonreír y compartir felicidad con tu familia y amigos. Y claro, nosotros estamos aquí, para que disfrutes de una experiencia irrepetible que llamamos fotografía de bodas.
 						span.quote-image__right ❞
@@ -29,10 +32,10 @@ block content
 			.container
 				.wedding-section__inner
 					.wedding-image
-						img(src="/images/home/wedding-photo-1.png")
+						img(src=imgPrefixUrl+"images/home/wedding-photo-1.png")
 						.wedding-image__text
 							p FOTOGRAFIAMOS #[strong BODAS] Porque la única forma de capturar el amor, es a través de una cámara.
-						img(src="/images/home/wedding-photo-2.png")
+						img(src=imgPrefixUrl+"images/home/wedding-photo-2.png")
 		
 		section.weare-section
 			.container
@@ -43,13 +46,13 @@ block content
 								.weare-description
 									.weare-description__top
 										p Hola, somos #[span Juan Pablo & Elizabeth] Santa Cruz
-										img(src="/images/iso-photo.png")
+										img(src=imgPrefixUrl+"images/iso-photo.png")
 									.weare-description__bottom
 										p Nos casamos en 2022, con el deseo de crear una marca capaz de cambiar el proceso habitual de hacer fotografía de bodas. Además, sabemos bien lo que es estar en tus zapatos.
 										p ¡Sobre todo en los de la novia!
 								.weare-description-mobile
 									p #[span Hola,] #[span somos] Juan Pablo & Elizabeth Santa Cruz
-									img(src="/images/iso-photo.png")
+									img(src=imgPrefixUrl+"images/iso-photo.png")
 						.weare-box__textMobile
 							p Nos casamos en 2022, con el deseo de crear una marca capaz de cambiar el proceso habitual de hacer fotografía de bodas. Además, sabemos bien lo que es estar en tus zapatos.
 							p ¡Sobre todo en los de la novia!
@@ -66,13 +69,13 @@ block content
 							ul
 								li
 									a(href="/" target="_blank") 
-										img(src="/images/icons/icon-whatsapp.png", alt="")
+										img(src=imgPrefixUrl+"images/icons/icon-whatsapp.png", alt="")
 								li
 									a(href="/" target="_blank")
-										img(src="/images/icons/icon-mail.png", alt="")
+										img(src=imgPrefixUrl+"images/icons/icon-mail.png", alt="")
 								li
 									a(href="/" target="_blank")
-										img(src="/images/icons/icon-msn.png", alt="")
+										img(src=imgPrefixUrl+"images/icons/icon-msn.png", alt="")
 		section.fav-section.header-title
 			h2 LOS FAVORITOS DE NUESTROS CLIENTES
 			p Explora lo más destacado de nuestra línea de producción artística
@@ -99,15 +102,15 @@ block content
 									| DESCARGAS ILIMITADAS
 									<i class="icon-checkmark"></i>
 						.fotobook-content__image
-							img(src="/images/home/fotobook-online.png" alt="Fotobook")
+							img(src=imgPrefixUrl+"images/home/fotobook-online.png" alt="Fotobook")
 					p.fotobook-section__inner__text No te preocupes por el espacio, ni pierdas tus fotos más preciadas. Te ofrecemos alojamiento privado en la nube hasta por un año. Podrás descargar y compartir tu álbum, o solo tus fotos favoritas.
 		section.custom-section
 			.container
 				.custom-section__inner
 					h2 #[strong Pack Fondos Personalizados de] Pantalla
 					.custom-content
-						img(src="/images/home/fondos-personalizados.png" alt="fondos personalizados").desktop
-						img(src="/images/home/fondos-personalizados-mobile.png" alt="fondos personalizados").mobile
+						img(src=imgPrefixUrl+"images/home/fondos-personalizados.png" alt="fondos personalizados").desktop
+						img(src=imgPrefixUrl+"images/home/fondos-personalizados-mobile.png" alt="fondos personalizados").mobile
 						p Una exclusiva colección con increíbles fotos personalizadas y listas para instalarse como fondos de pantalla en todos tus dispositivos.
 		section.art-section
 			.container
@@ -116,7 +119,7 @@ block content
 						h2 #[strong Pack]  Arte impreso
 						p Decora tu recepción con lo más fino de nuestra línea de producción artística.
 					.art-content
-						img(src="/images/home/arte-impreso.png" alt="Arte impreso")
+						img(src=imgPrefixUrl+"images/home/arte-impreso.png" alt="Arte impreso")
 						.art-content__text
 							span.border
 							span.border
@@ -125,13 +128,13 @@ block content
 							p Foto Wall - Lienzo de Bienvenida - Álbum de Firmas
 					.art-content-mobile
 						.art-content-mobile__item
-							img(src="/images/home/foto-wall.png" alt="Foto wall")
+							img(src=imgPrefixUrl+"images/home/foto-wall.png" alt="Foto wall")
 							p Foto Wall
 						.art-content-mobile__item
-							img(src="/images/home/lienzo.png" alt="Lienzo de Bienvenida")
+							img(src=imgPrefixUrl+"images/home/lienzo.png" alt="Lienzo de Bienvenida")
 							p Lienzo de Bienvenida
 						.art-content-mobile__item
-							img(src="/images/home/album.png" alt="Álbum de Firmas")
+							img(src=imgPrefixUrl+"images/home/album.png" alt="Álbum de Firmas")
 							p Álbum de Firmas
 		
 		section.client-section
@@ -162,12 +165,12 @@ block content
 				.howdo-section__inner
 					.howdo-content
 						.howdo-content__img
-							img(src="/images/home/como-hacemos.jpg").desktop
-							img(src="/images/home/como-hacemos-mobile.jpg").mobile
+							img(src=imgPrefixUrl+"images/home/como-hacemos.jpg").desktop
+							img(src=imgPrefixUrl+"images/home/como-hacemos-mobile.jpg").mobile
 						.howdo-content__text
 							p De la misma forma en que todo expresa armonía en la naturaleza, comprueba como cada paquete que diseñamos para ti, se complementa con cada una de las 4 estaciones de nuestra plataforma creativa.
 						.howdo-content__logo
-							img(src="/images/icons/logo-green.png" alt="Santa Cruz")
+							img(src=imgPrefixUrl+"images/icons/logo-green.png" alt="Santa Cruz")
 		section.packages-section
 			.container
 				.packages-section__inner
@@ -214,13 +217,13 @@ block content
 						ul
 							li
 								a(href="/" target="_blank") 
-									img(src="/images/icons/icon-whatsapp.png", alt="whatsapp")
+									img(src=imgPrefixUrl+"images/icons/icon-whatsapp.png", alt="whatsapp")
 							li
 								a(href="/" target="_blank")
-									img(src="/images/icons/icon-mail.png", alt="mail")
+									img(src=imgPrefixUrl+"images/icons/icon-mail.png", alt="mail")
 							li
 								a(href="/" target="_blank")
-									img(src="/images/icons/icon-msn.png", alt="msn")
+									img(src=imgPrefixUrl+"images/icons/icon-msn.png", alt="msn")
 		section.contact-section
 			.container
 				.contact-section__inner
@@ -233,12 +236,12 @@ block content
 									ul
 										li
 											a(href="/" target="_blank") 
-												img(src="/images/icons/icon-whatsapp.png", alt="whatsapp")
+												img(src=imgPrefixUrl+"images/icons/icon-whatsapp.png", alt="whatsapp")
 										li
 											a(href="/" target="_blank")
-												img(src="/images/icons/icon-mail.png", alt="mail")
+												img(src=imgPrefixUrl+"images/icons/icon-mail.png", alt="mail")
 										li
 											a(href="/" target="_blank")
-												img(src="/images/icons/icon-msn.png", alt="msn")
+												img(src=imgPrefixUrl+"images/icons/icon-msn.png", alt="msn")
 									p Escríbenos o llámanos
 									strong.number 982-141-940

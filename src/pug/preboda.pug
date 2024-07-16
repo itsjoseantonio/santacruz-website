@@ -1,11 +1,14 @@
 extends ./layouts/_default.pug
 
+block variables
+    - var imgPrefixUrl = IMG_PREFIX_URL
+
 block content
     header.prewedding-header.page-header
         .container
             .prewedding-header__inner.page-header__inner
                 .prewedding-box.page-header__inner__box
-                    img(src="/images/iso-photo.png" width="60" style="width:60px")
+                    img(src=imgPrefixUrl+"images/iso-photo.png" width="60" style="width:60px")
                     h1 Preboda
     section.prewedding-main-section
         .container
@@ -13,9 +16,9 @@ block content
                 .prewedding-box
                     .prewedding-box__image
                         .prewedding-box__image__left
-                            img(src="/images/preboda/main-preboda-1.png" alt="Preboda")
+                            img(src=imgPrefixUrl+"images/preboda/main-preboda-1.png" alt="Preboda")
                         .prewedding-box__image__right
-                            img(src="/images/preboda/main-preboda-2.png" alt="Preboda")
+                            img(src=imgPrefixUrl+"images/preboda/main-preboda-2.png" alt="Preboda")
                     .prewedding-box__text
                         p Esta es la primera sesión de fotos de todos nuestros paquetes, y al mismo tiempo, es la experiencia que recuerdan nuestros clientes con más nostalgia. Déjate sorprender con la magia que hay detrás de cada escenario.
     section.prewedding-gallery
@@ -24,41 +27,41 @@ block content
                 .gallery-general
                     .gallery-general__left.preboda-1
                         .gallery-general__left__item
-                            img(src="/images/preboda/photo1.jpg" alt="Gallery")
+                            img(src=imgPrefixUrl+"images/preboda/photo1.jpg" alt="Gallery")
                         .gallery-general__left__item
-                            img(src="/images/preboda/photo2.jpg" alt="Gallery")
+                            img(src=imgPrefixUrl+"images/preboda/photo2.jpg" alt="Gallery")
                         .gallery-general__left__item
                             .gallery-general__left__item__image
-                                img(src="/images/preboda/photo3.jpg" alt="Gallery")
+                                img(src=imgPrefixUrl+"images/preboda/photo3.jpg" alt="Gallery")
                             p Cada sesión se basa en una paleta de colores que creamos y personalizamos para cada pareja.
                     .gallery-general__right
                         .gallery-general__right__item
                             .gallery-general__left__item__image
-                                img(src="/images/preboda/photo4.jpg" alt="Gallery")
+                                img(src=imgPrefixUrl+"images/preboda/photo4.jpg" alt="Gallery")
                             p De acuerdo a la estación del año, y la hora del día, coordinamos el lugar y momento ideal para retratar esta hermosa experiencia
                         .gallery-general__right__item
-                            img(src="/images/preboda/photo5.jpg" alt="Gallery")
+                            img(src=imgPrefixUrl+"images/preboda/photo5.jpg" alt="Gallery")
                 .gallery-general
                     .gallery-general__left
                         .gallery-general__left__item
-                            img(src="/images/preboda/photo6.jpg" alt="Gallery")
+                            img(src=imgPrefixUrl+"images/preboda/photo6.jpg" alt="Gallery")
                         .gallery-general__left__item
                             .gallery-general__left__item__image
-                                img(src="/images/preboda/photo7.jpg" alt="Gallery")
+                                img(src=imgPrefixUrl+"images/preboda/photo7.jpg" alt="Gallery")
                             p Contamos con una ampia lista de escenarios listos para plasmar tu historia de amor.
                     .gallery-general__right.preboda-2
                         .gallery-general__right__item
-                            img(src="/images/preboda/photo8.jpg" alt="Gallery")
+                            img(src=imgPrefixUrl+"images/preboda/photo8.jpg" alt="Gallery")
                         .gallery-general__right__item
-                            img(src="/images/preboda/photo9.jpg" alt="Gallery")
+                            img(src=imgPrefixUrl+"images/preboda/photo9.jpg" alt="Gallery")
                 .gallery-general.column
                     .gallery-general__full
                         .gallery-general__full__image
-                            img(src="/images/preboda/photo10.jpg" alt="Gallery")
+                            img(src=imgPrefixUrl+"images/preboda/photo10.jpg" alt="Gallery")
                         p El objetivo de la sesión es proyectar naturalidad espóntanea, y retratarla con sensibilidad artística. Llevar un atuendo adicional, incrementa la variedad en las imágenes.
                     .gallery-general__full
                         .gallery-general__full__image
-                            img(src="/images/preboda/photo11.jpg" alt="Gallery")
+                            img(src=imgPrefixUrl+"images/preboda/photo11.jpg" alt="Gallery")
     section.alsolike-section
         .container
             .alsolike-section__inner
@@ -66,11 +69,11 @@ block content
                     h2 También te puede interesar
                     .alsolike-box__content
                         a(href="/makeup.html").alsolike-box__content__item
-                            img(src="/images/makeup.jpg" alt="Makeup")
+                            img(src=imgPrefixUrl+"images/makeup.jpg" alt="Makeup")
                             h3 Sesiones Makeup
                         a(href="/indoor.html").alsolike-box__content__item
-                            img(src="/images/indoor.jpg" alt="Indoor")
+                            img(src=imgPrefixUrl+"images/indoor.jpg" alt="Indoor")
                             h3 Sesiones Indoor
                         a(href="/outdoor.html").alsolike-box__content__item
-                            img(src="/images/outdoor.jpg" alt="Outdoor")
+                            img(src=imgPrefixUrl+"images/outdoor.jpg" alt="Outdoor")
                             h3 Sesiones Outdoor
