@@ -186,6 +186,22 @@ html {
                 min-width: 100%;
             }
         }
+
+        &__item {
+            overflow: hidden;
+
+            &__image {
+                overflow: hidden;
+            }
+
+            img {
+                transition: all 200ms ease;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
     }
 
     &__right {
@@ -198,6 +214,54 @@ html {
 
             @include max-phone {
                 min-width: 100%;
+            }
+        }
+
+        &__item {
+            overflow: hidden;
+
+            &__image {
+                overflow: hidden;
+            }
+
+            img {
+                transition: all 200ms ease;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    &__full {
+        position: relative;
+
+        &__item {
+            overflow: hidden;
+
+            &__image {
+                overflow: hidden;
+            }
+
+            img {
+                transition: all 200ms ease;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        &__image {
+            overflow: hidden;
+
+            img {
+                transition: all 200ms ease;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
             }
         }
     }

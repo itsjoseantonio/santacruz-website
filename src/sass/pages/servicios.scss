@@ -230,17 +230,24 @@
                 gap: 30px;
                 justify-content: center;
                 align-items: center;
-                flex-wrap: wrap;
+
+                @include max-tablet {
+                    flex-wrap: wrap;
+                }
 
                 &__item {
                     text-align: center;
 
                     &:nth-child(1) {
-                        order: 1;
+                        @include max-tablet {
+                            order: 1;
+                        }
                     }
 
                     &:nth-child(2) {
-                        order: 3;
+                        @include max-tablet {
+                            order: 3;
+                        }
 
                         @include max-phone {
                             order: 2;
@@ -248,7 +255,9 @@
                     }
 
                     &:nth-child(3) {
-                        order: 2;
+                        @include max-tablet {
+                            order: 2;
+                        }
 
                         @include max-phone {
                             order: 3;

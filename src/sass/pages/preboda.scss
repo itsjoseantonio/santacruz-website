@@ -88,7 +88,7 @@
                 @include max-phone {
                     font-size: 16px;
                     line-height: 20px;
-                    padding: 10px 0;
+                    padding: 10px 20px;
                 }
             }
 
@@ -112,6 +112,8 @@
 
     &__inner {
         .alsolike-box {
+            $this: &;
+
             text-align: center;
             color: $shadow-blue;
 
@@ -126,6 +128,14 @@
                 gap: 30px;
                 flex-wrap: wrap;
 
+                &:hover {
+                    .alsolike-box__content__item:not(:hover) {
+                        img {
+                            filter: grayscale(1);
+                        }
+                    }
+                }
+
                 &__item {
                     display: flex;
                     flex-direction: column;
@@ -135,6 +145,7 @@
 
                     img {
                         max-width: 250px;
+                        transition: all 300ms ease;
 
                         @include max-phone {
                             max-width: 320px;

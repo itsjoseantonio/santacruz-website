@@ -115,6 +115,22 @@
                 gap: 20px;
             }
 
+            &__image {
+                overflow: hidden;
+
+                &__inner {
+                    overflow: hidden;
+                }
+
+                img {
+                    transition: all 200ms ease;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
             p {
                 @include max-tablet {
                     font-size: 20px;
@@ -125,7 +141,7 @@
                 @include max-phone {
                     font-size: 16px;
                     line-height: 20px;
-                    padding: 10px 0;
+                    padding: 10px 20px;
                 }
             }
 
@@ -199,6 +215,61 @@
                 @include min-desktop {
                     display: none;
                 }
+            }
+        }
+    }
+}
+
+.box-contact {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    height: 100%;
+    flex-direction: column;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+
+    @include min-phone {
+        position: static;
+        margin-top: 5px;
+        background-color: $shadow-blue;
+        padding: 20px 0 30px;
+    }
+
+    &__top {
+        border-bottom: 1px solid $white;
+        padding-bottom: 10px;
+
+        img {
+            width: 250px;
+
+            @include min-phone {
+                width: 280px;
+            }
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding-top: 10px;
+
+        i {
+            font-size: 32px;
+        }
+
+        p {
+            font-size: 11px !important;
+            max-width: 170px;
+            line-height: 13px !important;
+
+            @include min-phone {
+                padding: 0 !important;
             }
         }
     }

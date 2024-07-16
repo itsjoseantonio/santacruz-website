@@ -37,7 +37,7 @@
         margin-left: -150px;
         bottom: 80px;
         padding: 15px 25px;
-        opacity: 0.7;
+        opacity: 0.5;
 
         p {
             color: $white;
@@ -56,31 +56,31 @@
             position: absolute;
 
             &:first-child {
-                width: calc(100% + 10px);
+                width: calc(100% + 20px);
                 border-top: 1px solid $white;
-                left: -5px;
+                left: -10px;
                 top: 0;
             }
 
             &:nth-child(2) {
-                height: calc(100% + 10px);
+                height: calc(100% + 20px);
                 border-left: 1px solid $white;
                 right: 0px;
-                top: -5px;
+                top: -10px;
             }
 
             &:nth-child(3) {
-                width: calc(100% + 10px);
+                width: calc(100% + 20px);
                 border-top: 1px solid $white;
-                left: -5px;
+                left: -10px;
                 bottom: 0;
             }
 
             &:nth-child(4) {
-                height: calc(100% + 10px);
+                height: calc(100% + 20px);
                 border-left: 1px solid $white;
                 left: 0px;
-                top: -5px;
+                top: -10px;
             }
         }
     }
@@ -99,6 +99,10 @@
             margin: 0 auto;
             position: relative;
 
+            @include min-lg-desktop {
+                max-width: 1090px;
+            }
+
             &__inner {
                 position: relative;
                 margin-bottom: 10px;
@@ -112,10 +116,10 @@
                     content: '';
                     border: 1px solid #fff;
                     position: absolute;
-                    top: 30px;
-                    left: 30px;
-                    right: 30px;
-                    bottom: 30px;
+                    top: 20px;
+                    left: 20px;
+                    right: 20px;
+                    bottom: 20px;
                     border-radius: 20px;
                     z-index: 1;
                     opacity: 0.8;
@@ -127,7 +131,7 @@
 
                 p {
                     text-transform: uppercase;
-                    font-size: 28px;
+                    font-size: 32px;
                     color: $white !important;
                     position: absolute;
                     font-style: italic;
@@ -152,7 +156,7 @@
                     }
 
                     small {
-                        font-size: 18px;
+                        font-size: 20px;
                     }
                 }
             }
@@ -163,10 +167,15 @@
                 font-size: 16px;
                 line-height: 20px;
 
+                @include min-lg-desktop {
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+
                 @include max-tablet {
                     padding: 0 20px;
-                    font-size: 18px;
-                    line-height: 22px;
+                    font-size: 26px;
+                    line-height: 30px;
                 }
 
                 @include max-phone {
@@ -269,6 +278,11 @@
                     border-radius: 50%;
                     left: -8px;
 
+                    @include min-lg-desktop {
+                        width: 380px;
+                        height: 380px;
+                    }
+
                     @include max-tablet {
                         width: 280px;
                         height: 280px;
@@ -285,6 +299,11 @@
                     border: 1px solid $white;
                     border-radius: 50%;
                     right: -8px;
+
+                    @include min-lg-desktop {
+                        width: 380px;
+                        height: 380px;
+                    }
 
                     @include max-tablet {
                         width: 280px;
@@ -303,6 +322,11 @@
 
             img {
                 max-width: 280px;
+                transition: all 300ms ease;
+
+                @include min-lg-desktop {
+                    max-width: initial;
+                }
 
                 @include max-tablet {
                     max-width: 250px;
@@ -364,8 +388,8 @@
                             padding: 20px 0 15px 20px;
 
                             p {
-                                font-size: 20px;
-                                line-height: 24px;
+                                font-size: 24px;
+                                line-height: 28px;
 
                                 span {
                                     display: block;
@@ -378,7 +402,7 @@
                         }
 
                         &__bottom {
-                            padding: 20px 0 0 0;
+                            padding: 15px 0 0 0;
                             display: flex;
                             flex-direction: column;
                             align-items: flex-end;
@@ -400,6 +424,10 @@
                         color: $white;
                         left: 15%;
                         top: 20%;
+
+                        @include min-desktop {
+                            display: none;
+                        }
 
                         @include max-phone {
                             left: 8%;
@@ -436,9 +464,9 @@
             }
 
             &__textMobile {
-                font-size: 20px;
+                font-size: 26px;
+                line-height: 30px;
                 color: $shadow-blue;
-                line-height: 24px;
                 padding: 20px 30px 0;
                 text-align: center;
 
@@ -467,6 +495,11 @@
 
     @include max-tablet {
         margin-bottom: 20px;
+        background-position: left -120px center;
+    }
+
+    @include max-phone {
+        background-position: left -220px center;
     }
 
     &__inner {
@@ -654,12 +687,12 @@
                 font-weight: 500;
 
                 @include max-tablet {
-                    max-width: 420px;
+                    max-width: 480px;
                 }
 
                 @include max-tablet {
-                    font-size: 16px;
-                    line-height: 20px;
+                    font-size: 26px;
+                    line-height: 30px;
                 }
             }
         }
@@ -672,9 +705,9 @@
             font-weight: 500;
 
             @include max-tablet {
-                font-size: 20px;
-                line-height: 24px;
-                max-width: 490px;
+                font-size: 26px;
+                line-height: 30px;
+                max-width: 560px;
                 margin: 0 auto;
             }
 
@@ -1092,7 +1125,7 @@
             font-size: 40px;
             line-height: 48px;
             color: $beryl-green;
-            opacity: 0.8;
+            opacity: 0.7;
             font-family: 'Montserrat';
             font-weight: 400;
             font-style: italic;
@@ -1442,8 +1475,9 @@
                         }
 
                         span {
-                            margin-bottom: 15px;
+                            margin-bottom: 7px;
                             display: block;
+                            line-height: 22px;
                         }
 
                         strong {

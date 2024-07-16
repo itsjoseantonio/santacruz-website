@@ -36,7 +36,7 @@
 
 /* RWD @media query setting */
 @mixin min-lg-desktop {
-    @media screen and (max-width: $desktop-lg-min) {
+    @media screen and (min-width: $desktop-lg-min) {
         @content;
     }
 }
