@@ -1,8 +1,11 @@
+block variables
+	- var imgPrefixUrl = IMG_PREFIX_URL
+
 footer.footer
 	.container
 		.footer-content
 			.footer-content__qr
-				img(src="/images/qr-image.png")
+				img(src=imgPrefixUrl+"images/qr-image.png")
 			.footer-content__contact
 				p CONTÁCTANOS
 				ul
@@ -12,7 +15,7 @@ footer.footer
 							| 982 141 940
 					li
 						a(href="mailto:contacto@santacruzfoto.com" target="_blank")
-							img(src="/images/icons/icon-mail.png", alt="email" width="26")
+							img(src=imgPrefixUrl+"images/icons/icon-mail.png", alt="email" width="26")
 							| contacto@santacruzfoto.com
 					li
 						a(href="/" target="_blank")
