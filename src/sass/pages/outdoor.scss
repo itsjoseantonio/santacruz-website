@@ -223,7 +223,11 @@
         padding-bottom: 10px;
 
         img {
-            width: 250px;
+            width: 350px;
+
+            @include max-tablet {
+                width: 250px;
+            }
 
             @include max-phone {
                 width: 280px;
@@ -243,11 +247,18 @@
         }
 
         p {
-            font-size: 11px !important;
-            max-width: 170px;
-            line-height: 13px !important;
+            font-size: 14px !important;
+            max-width: 210px;
+            line-height: 15px !important;
 
-            @include min-phone {
+            @include max-tablet {
+                font-size: 12px !important;
+                line-height: 13px !important;
+                padding: 0 !important;
+                max-width: 180px;
+            }
+
+            @include max-phone {
                 padding: 0 !important;
             }
         }

@@ -203,7 +203,16 @@
     font-family: 'malasia';
     src: url($imgPrefix + 'fonts/malisia-script.woff2') format('woff2'),
         url($imgPrefix + 'fonts/malisia-script.woff') format('woff'),
-        url($imgPrefix + 'fonts/malisia-script.otf') format('otf');
+        url($imgPrefix + 'fonts/malisia-script.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pertili';
+    src: url($imgPrefix + 'fonts/pertili.woff2') format('woff2'),
+        url($imgPrefix + 'fonts/pertili.woff') format('woff'),
+        url($imgPrefix + 'fonts/pertili.ttf') format('ttf');
     font-weight: normal;
     font-style: normal;
 }

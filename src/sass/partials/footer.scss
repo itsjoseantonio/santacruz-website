@@ -120,18 +120,30 @@
             }
 
             p {
-                margin-bottom: 30px;
+                margin-bottom: 25px;
                 font-size: 17px;
             }
 
             ul {
                 display: flex;
                 gap: 15px;
+                align-items: center;
 
                 li {
+                    &:first-child {
+                        a {
+                            img {
+                                width: 80px;
+                            }
+                        }
+                    }
                     a {
                         color: $white;
                         font-size: 48px;
+
+                        img {
+                            width: 60px;
+                        }
                     }
                 }
             }
