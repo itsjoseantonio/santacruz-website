@@ -25,6 +25,10 @@
         max-width: 850px;
         margin: 0 auto;
 
+        @include min-lg-desktop {
+            max-width: 1150px;
+        }
+
         @include max-tablet {
             padding: 0 30px;
         }
@@ -38,7 +42,7 @@
             }
 
             @include max-phone {
-                padding-left: 0px;
+                padding-left: 0;
             }
 
             h2 {
@@ -48,9 +52,21 @@
                 font-family: 'Montserrat';
                 font-style: italic;
 
+                @include min-lg-desktop {
+                    font-size: 84px;
+                    line-height: 72px;
+                    margin-bottom: 20px;
+                }
+
                 @include max-tablet {
-                    font-size: 42px;
-                    line-height: 38px;
+                    font-size: 60px;
+                    line-height: 48px;
+                }
+
+                @include max-phone {
+                    line-height: 44px;
+                    font-size: 54px;
+                    margin-bottom: 20px;
                 }
 
                 strong {
@@ -61,12 +77,17 @@
                     font-style: italic;
                     font-weight: 500;
 
+                    @include min-lg-desktop {
+                        font-size: 42px;
+                    }
+
                     @include max-tablet {
-                        font-size: 24px;
+                        font-size: 30px;
                     }
 
                     @include max-phone {
                         padding-left: 0px;
+                        font-size: 25px;
                     }
                 }
             }
@@ -78,6 +99,23 @@
                 font-family: 'Montserrat';
                 font-style: italic;
                 font-weight: 500;
+
+                @include min-lg-desktop {
+                    font-size: 20px;
+                    line-height: 24px;
+                    max-width: 685px;
+                }
+
+                @include max-tablet {
+                    font-size: 20px;
+                    max-width: 100%;
+                    line-height: 24px;
+                }
+
+                @include max-phone {
+                    line-height: 21px;
+                    font-size: 17px;
+                }
             }
         }
 
@@ -113,6 +151,7 @@
                         position: absolute;
                         right: -100%;
                         top: 0;
+                        width: 320px;
                     }
 
                     @include max-phone {
@@ -122,11 +161,16 @@
 
                 h3 {
                     color: $white;
-                    font-size: 16px;
+                    font-size: 18px;
                     font-family: 'Montserrat';
                     font-style: italic;
                     font-weight: 600;
                     text-align: center;
+
+                    @include min-lg-desktop {
+                        font-size: 20px;
+                        line-height: 24px;
+                    }
                 }
 
                 img {
@@ -138,16 +182,20 @@
 }
 
 .printed-section {
-    padding: 80px 0;
+    padding: 90px 0;
 
     @include max-tablet {
         padding: 60px 0;
     }
 
     &__inner {
-        max-width: 850px;
+        max-width: 1150px;
         margin: 0 auto;
         color: $shadow-blue;
+
+        @include max-tablet {
+            width: 80%;
+        }
 
         &__title {
             margin-bottom: 60px;
@@ -155,23 +203,41 @@
             font-style: italic;
             font-weight: 500;
 
-            @include max-tablet {
-                padding: 0 30px;
-            }
-
             h2 {
-                font-size: 56px;
+                font-size: 64px;
                 margin-bottom: 10px;
 
+                @include min-lg-desktop {
+                    font-size: 84px;
+                    line-height: 72px;
+                    margin-bottom: 20px;
+                }
+
                 @include max-tablet {
-                    font-size: 42px;
+                    font-size: 60px;
                 }
             }
 
             p {
-                font-size: 18px;
-                line-height: 22px;
-                max-width: 580px;
+                font-size: 20px;
+                line-height: 24px;
+                max-width: 610px;
+
+                @include min-lg-desktop {
+                    font-size: 24px;
+                    line-height: 28px;
+                    max-width: 730px;
+                }
+
+                @include max-tablet {
+                    font-size: 25px;
+                    line-height: 29px;
+                }
+
+                @include max-phone {
+                    font-size: 17px;
+                    line-height: 21px;
+                }
             }
         }
 
@@ -193,7 +259,7 @@
                 text-align: center;
 
                 @include max-tablet {
-                    width: 60%;
+                    width: 70%;
                 }
 
                 @include max-phone {
@@ -205,7 +271,7 @@
                 }
 
                 h3 {
-                    font-size: 16px;
+                    font-size: 18px;
                     font-family: 'Montserrat';
                     font-style: italic;
                     font-weight: 700;
@@ -214,8 +280,8 @@
         }
 
         &__text {
-            font-size: 20px;
-            line-height: 24px;
+            font-size: 26px;
+            line-height: 30px;
             text-align: center;
             font-family: 'Montserrat';
             font-style: italic;
@@ -229,7 +295,7 @@
     background-color: $light-grey;
 
     &__inner {
-        max-width: 850px;
+        max-width: 992px;
         margin: 0 auto;
         color: $shadow-blue;
 
@@ -237,9 +303,13 @@
             padding: 0 50px;
         }
 
+        @include max-phone {
+            padding: 0 25px;
+        }
+
         &__title {
             @include max-tablet {
-                margin-bottom: 30px;
+                margin-bottom: 40px;
             }
 
             h2 {
@@ -249,10 +319,21 @@
                 font-family: 'Montserrat';
                 font-style: italic;
 
+                @include min-lg-desktop {
+                    font-size: 84px;
+                    line-height: 72px;
+                    margin-bottom: 20px;
+                }
+
                 @include max-tablet {
-                    font-size: 42px;
-                    line-height: 36px;
+                    font-size: 60px;
+                    line-height: 64px;
                     margin-bottom: 10px;
+                }
+
+                @include max-phone {
+                    font-size: 42px;
+                    line-height: 46px;
                 }
 
                 strong {
@@ -264,8 +345,12 @@
                     font-weight: 500;
                     line-height: 32px;
 
+                    @include min-lg-desktop {
+                        font-size: 42px;
+                    }
+
                     @include max-tablet {
-                        font-size: 24px;
+                        font-size: 30px;
                         line-height: 28px;
                     }
                 }
@@ -278,6 +363,23 @@
                 font-family: 'Montserrat';
                 font-style: italic;
                 font-weight: 500;
+
+                @include min-lg-desktop {
+                    font-size: 25px;
+                    line-height: 29px;
+                    max-width: 520px;
+                }
+
+                @include max-tablet {
+                    font-size: 25px;
+                    line-height: 29px;
+                    max-width: 550px;
+                }
+
+                @include max-phone {
+                    font-size: 17px;
+                    line-height: 21px;
+                }
             }
         }
 

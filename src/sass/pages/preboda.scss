@@ -19,7 +19,7 @@
         }
 
         .prewedding-box {
-            max-width: 650px;
+            max-width: 860px;
             margin: 0 auto;
 
             @include max-tablet {
@@ -31,8 +31,12 @@
                 gap: 10px;
                 margin-bottom: 10px;
 
+                @include max-tablet {
+                    margin-bottom: 20px;
+                }
+
                 &__left {
-                    max-width: 600px;
+                    max-width: 610px;
 
                     img {
                         width: 100%;
@@ -54,8 +58,14 @@
                 color: $shadow-blue;
 
                 p {
-                    font-size: 18px;
-                    line-height: 24px;
+                    font-size: 25px;
+                    line-height: 30px;
+
+                    @include max-phone {
+                        font-size: 20px;
+                        line-height: 24px;
+                        padding: 0 20px;
+                    }
                 }
             }
         }
@@ -66,23 +76,32 @@
     padding: 20px 0;
 
     &__content {
-        max-width: 750px;
+        max-width: 992px;
         margin: 0 auto;
         display: flex;
         gap: 10px;
         flex-direction: column;
 
+        @include max-tablet {
+            gap: 20px;
+        }
+
         .gallery-general {
+            @include max-tablet {
+                flex-direction: column;
+                gap: 20px;
+            }
+
             @include max-phone {
                 flex-direction: column;
                 gap: 20px;
             }
 
             p {
-                @include max-phone {
-                    font-size: 20px;
-                    line-height: 24px;
-                    padding: 10px 20px;
+                @include max-tablet {
+                    font-size: 25px;
+                    line-height: 30px;
+                    padding: 10px 30px;
                 }
 
                 @include max-phone {
@@ -93,11 +112,15 @@
             }
 
             &__left {
-                gap: 20px;
+                @include max-tablet {
+                    gap: 20px;
+                }
             }
 
             &__right {
-                gap: 20px;
+                @include max-tablet {
+                    gap: 20px;
+                }
             }
         }
     }
@@ -119,7 +142,11 @@
 
             h2 {
                 margin-bottom: 30px;
-                font-size: 24px;
+                font-size: 32px;
+
+                @include max-phone {
+                    font-size: 20px;
+                }
             }
 
             &__content {
@@ -127,6 +154,11 @@
                 justify-content: center;
                 gap: 30px;
                 flex-wrap: wrap;
+
+                @include max-tablet {
+                    flex-direction: column;
+                    align-items: center;
+                }
 
                 &:hover {
                     .alsolike-box__content__item:not(:hover) {
@@ -144,7 +176,7 @@
                     text-align: center;
 
                     img {
-                        max-width: 250px;
+                        max-width: 310px;
                         transition: all 300ms ease;
 
                         @include max-phone {
@@ -153,9 +185,13 @@
                     }
 
                     h3 {
-                        font-size: 24px;
+                        font-size: 28px;
                         font-weight: normal;
                         color: $shadow-blue;
+
+                        @include max-phone {
+                            font-size: 20px;
+                        }
                     }
                 }
             }

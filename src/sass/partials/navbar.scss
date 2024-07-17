@@ -24,7 +24,7 @@
             @include max-tablet {
                 display: flex;
                 flex-direction: column;
-                gap: 30px;
+                gap: 40px;
                 background-color: $shadow-blue;
                 color: $white;
             }
@@ -36,7 +36,7 @@
 
                 a {
                     @include max-tablet {
-                        font-size: 28px;
+                        font-size: 32px;
                         color: $white;
                     }
                 }

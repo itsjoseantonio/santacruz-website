@@ -22,8 +22,8 @@
         }
 
         @include max-phone {
-            max-width: 360px;
-            margin-left: -180px;
+            max-width: 320px;
+            margin-left: -160px;
         }
 
         img {
@@ -35,9 +35,14 @@
         position: absolute;
         left: 50%;
         margin-left: -150px;
-        bottom: 80px;
+        bottom: 120px;
         padding: 15px 25px;
         opacity: 0.5;
+
+        @include max-phone {
+            max-width: 160px;
+            margin-left: -75px;
+        }
 
         p {
             color: $white;
@@ -93,6 +98,10 @@
         padding: 80px 0;
     }
 
+    @include max-phone {
+        padding: 60px 0;
+    }
+
     &__inner {
         .quote-image {
             max-width: 850px;
@@ -108,7 +117,17 @@
                 margin-bottom: 10px;
 
                 @include max-tablet {
-                    margin-bottom: 20px;
+                    background-image: url($imgPrefix + 'images/home/quote-photo-tablet.jpg');
+                    background-size: cover;
+                    background-position: center;
+                    min-height: 450px;
+                    margin-bottom: 40px;
+                }
+
+                @include max-phone {
+                    background-image: url($imgPrefix + 'images/home/quote-photo-mobile.jpg');
+                    min-height: 430px;
+                    margin-bottom: 30px;
                 }
 
                 &:after {
@@ -123,27 +142,52 @@
                     border-radius: 20px;
                     z-index: 1;
                     opacity: 0.8;
+
+                    @include max-tablet {
+                        display: none;
+                    }
                 }
 
                 img {
                     width: 100%;
+
+                    @include max-tablet {
+                        display: none;
+                    }
                 }
 
-                p {
+                p.text-desktop {
                     text-transform: uppercase;
-                    font-size: 32px;
                     color: $white !important;
                     position: absolute;
                     font-style: italic;
-                    left: 50px;
+                    left: 40px;
                     top: 50%;
                     text-align: left !important;
                     z-index: 2;
+                    font-size: 32px;
                     line-height: 32px;
                     margin-top: -66px;
                     font-family: 'Montserrat';
                     font-style: italic;
                     font-weight: 400;
+
+                    @include max-tablet {
+                        margin-top: -86px;
+                        font-size: 28px;
+                        line-height: 38px;
+                    }
+
+                    @include max-phone {
+                        display: none;
+                    }
+
+                    em {
+                        @include max-tablet {
+                            font-size: 44px;
+                            line-height: 52px;
+                        }
+                    }
 
                     strong,
                     small {
@@ -153,10 +197,65 @@
                     strong,
                     span {
                         font-weight: 700;
+                        font-size: 34px;
+                        line-height: 34px;
+
+                        @include max-tablet {
+                            font-size: 28px;
+                            line-height: 28px;
+                        }
                     }
 
                     small {
                         font-size: 20px;
+
+                        @include max-tablet {
+                            font-size: 28px;
+                            line-height: 32px;
+                            max-width: 180px;
+                        }
+                    }
+                }
+
+                .text-left {
+                    text-transform: uppercase;
+                    position: absolute;
+                    top: 30px;
+                    left: 30px;
+                    color: $white;
+                    font-family: 'Montserrat';
+                    font-style: italic;
+                    font-weight: 400;
+                    font-size: 20px;
+
+                    strong {
+                        display: block;
+                        max-width: 160px;
+                    }
+
+                    @include min-tablet {
+                        display: none;
+                    }
+                }
+
+                .text-right {
+                    text-transform: uppercase;
+                    position: absolute;
+                    bottom: 0px;
+                    right: 30px;
+                    color: $white;
+                    font-family: 'Montserrat';
+                    font-style: italic;
+                    font-weight: 400;
+                    font-size: 20px;
+                    text-align: right;
+
+                    strong {
+                        display: block;
+                    }
+
+                    @include min-tablet {
+                        display: none;
                     }
                 }
             }
@@ -179,8 +278,9 @@
                 }
 
                 @include max-phone {
-                    font-size: 16px;
-                    line-height: 20px;
+                    font-size: 17px;
+                    line-height: 21px;
+                    padding: 0 60px;
                 }
             }
 
@@ -214,7 +314,7 @@
                 left: -180px;
 
                 @include max-tablet {
-                    margin-bottom: 30px;
+                    margin-bottom: 40px;
                 }
             }
 
@@ -222,7 +322,7 @@
                 right: -180px;
 
                 @include max-tablet {
-                    margin-top: 30px;
+                    margin-top: 40px;
                 }
             }
         }
@@ -231,10 +331,18 @@
 
 .wedding-section {
     padding: 65px 0;
-    background-image: url($imgPrefix + 'images/section-bg.jpg');
+    background-image: url($imgPrefix + 'images/home/bg-wedding-desktop.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    @include max-tablet {
+        background-image: url($imgPrefix + 'images/home/bg-wedding-tablet.jpg');
+    }
+
+    @include max-phone {
+        background-image: url($imgPrefix + 'images/home/bg-wedding-mobile.jpg');
+    }
 
     &__inner {
         .wedding-image {
@@ -259,12 +367,26 @@
                 align-items: center;
                 color: $white;
 
+                @include min-lg-desktop {
+                    width: 380px;
+                    height: 380px;
+                    font-size: 26px;
+                    line-height: 29px;
+                }
+
                 @include max-tablet {
-                    width: 280px;
-                    height: 280px;
+                    width: 320px;
+                    height: 320px;
                     font-size: 18px;
                     line-height: 22px;
+                    padding: 0 62px;
+                }
+
+                @include max-phone {
+                    width: 270px;
+                    height: 270px;
                     padding: 0 35px;
+                    font-size: 16px;
                 }
 
                 &:before {
@@ -284,8 +406,13 @@
                     }
 
                     @include max-tablet {
-                        width: 280px;
-                        height: 280px;
+                        width: 320px;
+                        height: 320px;
+                    }
+
+                    @include max-phone {
+                        width: 270px;
+                        height: 270px;
                     }
                 }
 
@@ -306,8 +433,13 @@
                     }
 
                     @include max-tablet {
-                        width: 280px;
-                        height: 280px;
+                        width: 320px;
+                        height: 320px;
+                    }
+
+                    @include max-phone {
+                        width: 270px;
+                        height: 270px;
                     }
                 }
 
@@ -315,8 +447,13 @@
                     display: block;
                     font-weight: normal;
                     font-size: 48px;
-                    letter-spacing: 3px;
                     line-height: 52px;
+                    letter-spacing: 3px;
+
+                    @include min-lg-desktop {
+                        font-size: 63px;
+                        line-height: 68px;
+                    }
                 }
             }
 
@@ -329,7 +466,11 @@
                 }
 
                 @include max-tablet {
-                    max-width: 250px;
+                    max-width: 270px;
+                }
+
+                @include max-phone {
+                    max-width: 220px;
                 }
             }
         }
@@ -341,7 +482,7 @@
 
     &__inner {
         .weare-box {
-            max-width: 850px;
+            max-width: 1120px;
             margin: 0 auto;
             padding: 40px;
             border: 2px dashed #eee;
@@ -365,16 +506,21 @@
                     background-repeat: no-repeat;
                     background-size: cover;
                     background-position: center;
-                    min-height: 350px;
+                    min-height: 460px;
                     position: relative;
 
                     @include max-tablet {
                         background-position: right;
+                        min-height: 650px;
+                    }
+
+                    @include max-phone {
+                        min-height: 350px;
                     }
 
                     .weare-description {
                         color: $white;
-                        max-width: 450px;
+                        max-width: 550px;
 
                         @include max-tablet {
                             display: none;
@@ -385,11 +531,11 @@
                             align-items: center;
                             justify-content: space-between;
                             border-bottom: 1px solid $white;
-                            padding: 20px 0 15px 20px;
+                            padding: 25px 0 15px 25px;
 
                             p {
-                                font-size: 24px;
-                                line-height: 28px;
+                                font-size: 28px;
+                                line-height: 32px;
 
                                 span {
                                     display: block;
@@ -397,12 +543,12 @@
                             }
 
                             img {
-                                width: 70px;
+                                width: 90px;
                             }
                         }
 
                         &__bottom {
-                            padding: 15px 0 0 0;
+                            padding: 20px 0 0 0;
                             display: flex;
                             flex-direction: column;
                             align-items: flex-end;
@@ -411,7 +557,7 @@
                                 text-align: right;
                                 font-size: 14px;
                                 line-height: 18px;
-                                max-width: 77%;
+                                max-width: 65%;
                                 font-family: 'Montserrat';
                                 font-style: italic;
                             }
@@ -420,10 +566,10 @@
 
                     .weare-description-mobile {
                         position: absolute;
-                        max-width: 180px;
+                        max-width: 240px;
                         color: $white;
-                        left: 15%;
-                        top: 20%;
+                        left: 12%;
+                        top: 15%;
 
                         @include min-desktop {
                             display: none;
@@ -431,17 +577,17 @@
 
                         @include max-phone {
                             left: 8%;
-                            top: 8%;
+                            top: 10%;
                             max-width: 140px;
                         }
 
                         p {
-                            font-size: 32px;
-                            line-height: 36px;
+                            font-size: 42px;
+                            line-height: 48px;
 
                             @include max-phone {
                                 font-size: 24px;
-                                line-height: 28px;
+                                line-height: 26px;
                             }
 
                             span {
@@ -450,7 +596,7 @@
                         }
 
                         img {
-                            width: 60px;
+                            width: 80px;
                             position: absolute;
                             top: 0;
                             right: 5px;
@@ -467,7 +613,7 @@
                 font-size: 26px;
                 line-height: 30px;
                 color: $shadow-blue;
-                padding: 20px 30px 0;
+                padding: 40px 50px 0;
                 text-align: center;
 
                 @include min-desktop {
@@ -475,7 +621,7 @@
                 }
 
                 @include max-phone {
-                    padding: 20px 60px 0;
+                    padding: 20px 80px 0;
                     font-size: 16px;
                     color: $shadow-blue;
                     line-height: 20px;
@@ -494,12 +640,12 @@
     background-position: center;
 
     @include max-tablet {
-        margin-bottom: 20px;
-        background-position: left -120px center;
+        margin-bottom: 30px;
+        background-position: left -190px center;
     }
 
     @include max-phone {
-        background-position: left -220px center;
+        background-position: left -200px center;
     }
 
     &__inner {
@@ -512,23 +658,38 @@
         min-height: 500px;
         align-items: center;
 
+        @include min-lg-desktop {
+            max-width: 1260px;
+            min-height: 650px;
+        }
+
+        @include max-tablet {
+            min-height: 650px;
+        }
+
+        @include max-phone {
+            min-height: 450px;
+        }
+
         .shine-box {
             text-align: right;
 
             @include max-tablet {
                 padding-right: 40px;
+                margin-top: -40px;
             }
 
             @include max-phone {
                 padding-right: 20px;
+                margin-top: 10px;
             }
 
             &__title {
-                font-size: 160px;
-                line-height: 140px;
+                font-size: 165px;
+                line-height: 145px;
                 text-transform: uppercase;
                 padding: 10px;
-                border: 10px solid $white;
+                border: 14px solid $white;
                 color: $white;
                 display: inline-block;
                 margin-bottom: 30px;
@@ -537,13 +698,18 @@
                 font-family: 'montserrat-bold';
                 padding-bottom: 0;
 
+                @include min-lg-desktop {
+                    font-size: 200px;
+                    line-height: 180px;
+                }
+
                 @include max-tablet {
-                    font-size: 80px;
-                    line-height: 84px;
-                    border: 8px solid $white;
-                    padding: 8px;
+                    font-size: 100px;
+                    line-height: 88px;
+                    border: 10px solid $white;
+                    padding: 10px;
                     padding-bottom: 0;
-                    margin-bottom: 20px;
+                    margin-bottom: 35px;
                 }
 
                 @include max-phone {
@@ -559,21 +725,27 @@
             &__subtitle {
                 color: $white;
                 margin-bottom: 20px;
-                font-size: 24px;
+                font-size: 25px;
                 font-family: 'Montserrat';
                 font-style: italic;
                 font-weight: 500;
 
+                @include min-lg-desktop {
+                    font-size: 28px;
+                }
+
                 @include max-tablet {
-                    font-size: 20px;
-                    max-width: 320px;
+                    font-size: 25px;
+                    max-width: 420px;
                     margin-left: auto;
+                    margin-bottom: 30px;
                 }
 
                 @include max-phone {
-                    font-size: 16px;
-                    max-width: 220px;
+                    font-size: 14px;
+                    max-width: 200px;
                     margin-left: auto;
+                    margin-bottom: 10px;
                 }
             }
 
@@ -587,26 +759,36 @@
 
                 @include max-tablet {
                     flex-direction: column-reverse;
-                    gap: 15px;
+                    gap: 30px;
                     align-items: flex-end;
+                }
+
+                @include max-phone {
+                    gap: 15px;
                 }
 
                 p {
                     padding-right: 25px;
                     border-right: 1px solid $white;
-                    font-size: 14px;
-                    line-height: 18px;
+                    font-size: 16px;
+                    line-height: 20px;
+
+                    @include min-lg-desktop {
+                        font-size: 20px;
+                        line-height: 24px;
+                    }
 
                     @include max-tablet {
                         border-right: none;
                         padding-right: 0;
-                        font-size: 16px;
-                        line-height: 20px;
+                        font-size: 20px;
+                        line-height: 24px;
                     }
 
                     @include max-phone {
                         font-size: 14px;
                         line-height: 18px;
+                        max-width: 120px;
                     }
 
                     span {
@@ -618,13 +800,29 @@
                 ul {
                     display: flex;
                     align-items: center;
-                    gap: 10px;
+                    gap: 15px;
                     padding-left: 25px;
+
+                    @include max-phone {
+                        gap: 10px;
+                    }
 
                     li {
                         a {
                             img {
-                                width: 50px;
+                                width: 55px;
+
+                                @include min-lg-desktop {
+                                    width: 75px;
+                                }
+
+                                @include max-tablet {
+                                    width: 75px;
+                                }
+
+                                @include max-phone {
+                                    width: 45px;
+                                }
                             }
                         }
                     }
@@ -647,8 +845,12 @@
     }
 
     &__inner {
-        max-width: 850px;
+        max-width: 970px;
         margin: 0 auto;
+
+        @include min-lg-desktop {
+            max-width: 1150px;
+        }
 
         &__title {
             margin-bottom: 30px;
@@ -660,49 +862,72 @@
 
             @include max-phone {
                 padding-left: 0px;
+                margin-bottom: 20px;
             }
 
             h2 {
-                font-size: 56px;
+                font-size: 64px;
                 font-family: 'montserrat-bold-italic';
                 margin-bottom: 10px;
 
+                @include min-lg-desktop {
+                    font-size: 84px;
+                }
+
                 @include max-tablet {
-                    font-size: 42px;
+                    font-size: 60px;
+                    line-height: 72px;
                     max-width: 250px;
                 }
 
                 @include max-phone {
                     max-width: 100%;
                     text-align: center;
+                    font-size: 54px;
+                    line-height: 64px;
                 }
             }
 
             p {
-                font-size: 20px;
-                line-height: 24px;
-                max-width: 750px;
+                font-size: 22px;
+                line-height: 26px;
+                max-width: 800px;
                 font-family: 'Montserrat';
                 font-style: italic;
                 font-weight: 500;
 
-                @include max-tablet {
-                    max-width: 480px;
+                @include min-lg-desktop {
+                    font-size: 26px;
+                    line-height: 30px;
+                    max-width: 950px;
                 }
 
                 @include max-tablet {
+                    max-width: 480px;
                     font-size: 26px;
                     line-height: 30px;
+                }
+
+                @include max-phone {
+                    font-size: 18px;
+                    line-height: 22px;
+                    text-align: center;
+                    padding: 0 30px;
                 }
             }
         }
 
         &__text {
-            font-size: 16px;
-            line-height: 20px;
+            font-size: 18px;
+            line-height: 22px;
             font-family: 'Montserrat';
             font-style: italic;
             font-weight: 500;
+
+            @include min-lg-desktop {
+                font-size: 22px;
+                line-height: 26px;
+            }
 
             @include max-tablet {
                 font-size: 26px;
@@ -712,8 +937,8 @@
             }
 
             @include max-phone {
-                font-size: 16px;
-                line-height: 20px;
+                font-size: 18px;
+                line-height: 22px;
                 text-align: center;
             }
         }
@@ -722,16 +947,21 @@
             margin-bottom: 40px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 20px;
+            justify-content: center;
 
             @include max-tablet {
                 flex-direction: column-reverse;
-                margin-bottom: 20px;
+                margin-bottom: 25px;
             }
 
             &__list {
                 box-shadow: -5px 6px 10px #d4d4d4;
-                min-width: 360px;
+                min-width: 380px;
+
+                @include max-tablet {
+                    min-width: 450px;
+                }
 
                 @include max-phone {
                     min-width: auto;
@@ -742,7 +972,7 @@
                         text-transform: uppercase;
                         font-style: italic;
                         padding: 12px 15px;
-                        font-size: 14px;
+                        font-size: 15px;
                         background-color: $light-grey;
                         border-bottom: 1px solid #cccccc;
                         font-family: 'Montserrat';
@@ -752,8 +982,23 @@
                         align-items: center;
                         justify-content: space-between;
 
+                        @include max-tablet {
+                            font-size: 17px;
+                            padding: 15px 20px;
+                        }
+
+                        @include max-phone {
+                            font-size: 14px;
+                            text-align: center;
+                            justify-content: center;
+                        }
+
                         i {
                             font-size: 16px;
+
+                            @include max-phone {
+                                display: none;
+                            }
                         }
                     }
                 }
@@ -788,8 +1033,12 @@
     }
 
     &__inner {
-        max-width: 850px;
+        max-width: 970px;
         margin: 0 auto;
+
+        @include min-lg-desktop {
+            max-width: 1150px;
+        }
 
         @include max-tablet {
             width: 80%;
@@ -799,26 +1048,39 @@
             font-size: 64px;
             font-family: 'montserrat-bold-italic';
 
+            @include min-lg-desktop {
+                font-size: 84px;
+            }
+
             @include max-tablet {
-                font-size: 42px;
+                font-size: 60px;
                 margin-bottom: 10px;
             }
 
             @include max-phone {
                 text-align: center;
+                font-size: 54px;
             }
 
             strong {
                 display: block;
-                font-size: 32px;
+                font-size: 34px;
                 padding-left: 25px;
                 font-family: 'Montserrat';
                 font-style: italic;
                 font-weight: 500;
 
+                @include min-lg-desktop {
+                    font-size: 42px;
+                }
+
                 @include max-tablet {
-                    font-size: 24px;
+                    font-size: 30px;
                     padding-left: 0;
+                }
+
+                @include max-phone {
+                    font-size: 25px;
                 }
             }
         }
@@ -844,6 +1106,10 @@
                 @include max-tablet {
                     display: block;
                 }
+
+                @include max-phone {
+                    width: 100%;
+                }
             }
 
             img.desktop {
@@ -859,14 +1125,19 @@
                 font-style: italic;
                 font-weight: 500;
 
+                @include min-lg-desktop {
+                    font-size: 28px;
+                    line-height: 32px;
+                }
+
                 @include max-tablet {
-                    font-size: 20px;
-                    line-height: 24px;
+                    font-size: 25px;
+                    line-height: 29px;
                 }
 
                 @include max-phone {
-                    font-size: 16px;
-                    line-height: 20px;
+                    font-size: 18px;
+                    line-height: 22px;
                     text-align: center;
                 }
             }
@@ -879,12 +1150,16 @@
     color: $shadow-blue;
 
     @include max-tablet {
-        padding: 60px 0;
+        padding: 60px 0 80px;
     }
 
     &__inner {
-        max-width: 850px;
+        max-width: 970px;
         margin: 0 auto;
+
+        @include min-lg-desktop {
+            max-width: 1150px;
+        }
 
         @include max-tablet {
             width: 80%;
@@ -896,8 +1171,12 @@
             font-style: italic;
             font-weight: 500;
 
-            @include max-tablet {
+            @include min-lg-desktop {
                 margin-bottom: 30px;
+            }
+
+            @include max-tablet {
+                margin-bottom: 50px;
             }
 
             h2 {
@@ -905,13 +1184,17 @@
                 margin-bottom: 15px;
                 font-family: 'montserrat-bold-italic';
 
+                @include min-lg-desktop {
+                    font-size: 84px;
+                }
+
                 @include max-tablet {
-                    font-size: 42px;
+                    font-size: 60px;
                     margin-bottom: 10px;
                 }
 
                 @include max-phone {
-                    font-size: 42px;
+                    font-size: 56px;
                     text-align: center;
                 }
 
@@ -921,9 +1204,17 @@
                     padding-left: 50px;
                     font-family: 'montserrat-regular';
 
+                    @include min-lg-desktop {
+                        font-size: 42px;
+                    }
+
                     @include max-tablet {
-                        font-size: 24px;
+                        font-size: 30px;
                         padding-left: 0;
+                    }
+
+                    @include max-phone {
+                        font-size: 25px;
                     }
                 }
             }
@@ -933,9 +1224,22 @@
                 line-height: 24px;
                 max-width: 550px;
 
+                @include min-lg-desktop {
+                    font-size: 28px;
+                    line-height: 32px;
+                    max-width: 700px;
+                }
+
+                @include max-tablet {
+                    font-size: 25px;
+                    line-height: 29px;
+                    text-align: left;
+                    max-width: 100%;
+                }
+
                 @include max-phone {
-                    font-size: 16px;
-                    line-height: 20px;
+                    font-size: 18px;
+                    line-height: 22px;
                     text-align: center;
                 }
             }
@@ -957,36 +1261,40 @@
                 text-align: center;
                 padding: 15px;
 
+                @include min-lg-desktop {
+                    padding: 20px;
+                }
+
                 .border {
                     border-color: $white;
                     position: absolute;
 
                     &:first-child {
-                        width: calc(100% + 10px);
+                        width: calc(100% + 20px);
                         border-top: 1px solid $shadow-blue;
-                        left: -5px;
+                        left: -10px;
                         top: 0;
                     }
 
                     &:nth-child(2) {
-                        height: calc(100% + 10px);
+                        height: calc(100% + 20px);
                         border-left: 1px solid $shadow-blue;
                         right: 0px;
-                        top: -5px;
+                        top: -10px;
                     }
 
                     &:nth-child(3) {
-                        width: calc(100% + 10px);
+                        width: calc(100% + 20px);
                         border-top: 1px solid $shadow-blue;
-                        left: -5px;
+                        left: -10px;
                         bottom: 0;
                     }
 
                     &:nth-child(4) {
-                        height: calc(100% + 10px);
+                        height: calc(100% + 20px);
                         border-left: 1px solid $shadow-blue;
                         left: 0px;
-                        top: -5px;
+                        top: -10px;
                     }
                 }
 
@@ -996,6 +1304,10 @@
                     font-family: 'Montserrat';
                     font-style: italic;
                     font-weight: 500;
+
+                    @include min-lg-desktop {
+                        font-size: 32px;
+                    }
                 }
             }
         }
@@ -1013,19 +1325,19 @@
                 text-align: center;
 
                 img {
-                    width: 90%;
+                    width: 100%;
                 }
 
                 p {
-                    font-size: 28px;
-                    line-height: 32px;
+                    font-size: 75px;
+                    line-height: 79px;
                     font-family: 'Montserrat';
                     font-style: italic;
-                    font-weight: 600;
+                    font-weight: 500;
 
                     @include max-phone {
-                        font-size: 24px;
-                        line-height: 28px;
+                        font-size: 34px;
+                        line-height: 38px;
                     }
                 }
             }
@@ -1035,6 +1347,27 @@
 
 .client-section {
     background-color: $light-grey;
+
+    @include max-tablet {
+        padding-top: 30px;
+    }
+
+    .header-title {
+        padding: 100px 0;
+
+        @include max-phone {
+            padding: 60px 0;
+        }
+
+        h2 {
+            font-size: 60px;
+            padding: 0 10px;
+
+            @include max-phone {
+                font-size: 36px;
+            }
+        }
+    }
 
     &__inner {
         padding: 50px 0;
@@ -1048,10 +1381,14 @@
             justify-content: center;
             gap: 20px;
 
+            @include min-lg-desktop {
+                gap: 30px;
+            }
+
             @include max-tablet {
                 flex-direction: column;
                 align-items: center;
-                gap: 30px;
+                gap: 35px;
             }
 
             @include max-phone {
@@ -1067,23 +1404,43 @@
                 background-color: $white;
                 color: $shadow-blue;
 
+                @include min-lg-desktop {
+                    max-width: 380px;
+                }
+
                 @include max-tablet {
-                    max-width: 500px;
-                    padding: 25px 40px 40px;
+                    max-width: 600px;
+                    padding: 30px 50px 45px;
                 }
 
                 h3 {
-                    margin-bottom: 15px;
-                    font-size: 20px;
+                    margin-bottom: 5px;
+                    font-size: 22px;
+                    font-family: 'malasia';
+                    font-weight: normal;
+
+                    @include max-tablet {
+                        margin-bottom: 20px;
+                    }
                 }
 
                 p {
-                    line-height: 18px;
-                    font-size: 14px;
+                    line-height: 20px;
+                    font-size: 16px;
+
+                    @include min-lg-desktop {
+                        line-height: 22px;
+                        font-size: 18px;
+                    }
 
                     @include max-tablet {
-                        font-size: 20px;
-                        line-height: 24px;
+                        font-size: 25px;
+                        line-height: 30px;
+                    }
+
+                    @include max-tablet {
+                        font-size: 18px;
+                        line-height: 22px;
                     }
                 }
             }
@@ -1100,13 +1457,20 @@
     background-position: center;
     position: relative;
 
+    @include min-lg-desktop {
+        padding: 180px 0;
+        font-size: 18px;
+    }
+
     @include max-tablet {
-        padding: 80px 0;
+        padding: 85px 0;
         margin-bottom: 30px;
+        min-height: 420px;
+        background-position: center right -100px;
     }
 
     @include max-phone {
-        background-position: center right -40px;
+        background-position: center right -90px;
     }
 
     &__inner {
@@ -1122,17 +1486,22 @@
         }
 
         p {
-            font-size: 40px;
-            line-height: 48px;
+            font-size: 44px;
+            line-height: 52px;
             color: $beryl-green;
             opacity: 0.7;
             font-family: 'Montserrat';
             font-weight: 400;
             font-style: italic;
 
+            @include min-lg-desktop {
+                font-size: 60px;
+                line-height: 68px;
+            }
+
             @include max-tablet {
-                font-size: 24px;
-                line-height: 28px;
+                font-size: 30px;
+                line-height: 34px;
             }
 
             @include max-phone {
@@ -1145,13 +1514,18 @@
 
             strong {
                 display: block;
-                font-size: 40px;
-                line-height: 48px;
+                font-size: 44px;
+                line-height: 52px;
                 font-weight: 800;
 
+                @include min-lg-desktop {
+                    font-size: 60px;
+                    line-height: 68px;
+                }
+
                 @include max-tablet {
-                    font-size: 24px;
-                    line-height: 28px;
+                    font-size: 30px;
+                    line-height: 34px;
                 }
 
                 @include max-phone {
@@ -1160,12 +1534,17 @@
                 }
 
                 &.first {
-                    font-size: 68px;
-                    line-height: 70px;
+                    font-size: 76px;
+                    line-height: 78px;
+
+                    @include min-lg-desktop {
+                        font-size: 102px;
+                        line-height: 96px;
+                    }
 
                     @include max-tablet {
-                        font-size: 40px;
-                        line-height: 42px;
+                        font-size: 52px;
+                        line-height: 56px;
                     }
 
                     @include max-phone {
@@ -1179,10 +1558,32 @@
 }
 
 .howdo-section {
+    .header-title {
+        padding: 70px 0;
+
+        @include max-phone {
+            padding: 0;
+        }
+
+        h2 {
+            font-size: 39px;
+            line-height: 52px;
+
+            @include max-phone {
+                padding: 50px 10px;
+                font-size: 28px;
+                line-height: 36px;
+            }
+        }
+    }
     &__inner {
-        max-width: 992px;
+        max-width: 970px;
         padding: 100px 0;
         margin: 0 auto;
+
+        @include min-lg-desktop {
+            max-width: 1150px;
+        }
 
         @include max-tablet {
             max-width: 90%;
@@ -1211,6 +1612,10 @@
                     @include max-tablet {
                         display: block;
                     }
+
+                    @include max-phone {
+                        width: 60%;
+                    }
                 }
 
                 img.desktop {
@@ -1224,23 +1629,47 @@
                 padding: 25px 30px;
                 box-shadow: -4px 5px 10px #d4d4d4;
                 background-color: $light-grey;
-                max-width: 750px;
+                max-width: 780px;
                 text-align: center;
                 margin: 0 auto 20px;
 
+                @include min-lg-desktop {
+                    max-width: 900px;
+                }
+
                 @include max-tablet {
-                    max-width: 380px;
+                    max-width: 460px;
+                    padding: 30px 35px;
                 }
 
                 p {
-                    font-size: 16px;
-                    line-height: 20px;
+                    font-size: 18px;
+                    line-height: 22px;
+
+                    @include min-lg-desktop {
+                        font-size: 22px;
+                        line-height: 26px;
+                    }
+
+                    @include max-tablet {
+                        font-size: 20px;
+                        line-height: 24px;
+                    }
+
+                    @include max-phone {
+                        font-size: 17px;
+                        line-height: 21px;
+                    }
                 }
             }
 
             &__logo {
                 img {
-                    width: 350px;
+                    width: 450px;
+
+                    @include max-tablet {
+                        width: 420px;
+                    }
 
                     @include max-phone {
                         width: 85%;
@@ -1279,25 +1708,26 @@
             color: $white;
             border: 1px solid $white;
             border-top: 0;
-            margin-bottom: 40px;
+            margin-bottom: 45px;
             font-family: 'Montserrat';
             font-weight: 400;
             text-transform: uppercase;
             padding: 20px 40px;
             border-radius: 0 0 20px 20px;
             letter-spacing: 10px;
+            font-size: 28px;
 
             @include max-tablet {
                 border-top: 1px solid $white;
                 border-radius: 10px;
-                padding: 30px 40px;
-                font-size: 32px;
-                line-height: 40px;
-                max-width: 420px;
+                padding: 35px 60px;
+                font-size: 46px;
+                line-height: 54px;
+                max-width: 520px;
                 font-weight: 200;
                 letter-spacing: 20px;
                 text-align: center;
-                margin-bottom: 50px;
+                margin-bottom: 100px;
             }
 
             @include max-phone {
@@ -1317,7 +1747,7 @@
             display: flex;
             justify-content: center;
             gap: 40px;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
 
             @include max-tablet {
                 flex-direction: column;
@@ -1325,10 +1755,10 @@
             }
 
             &__item {
-                border: 3px solid #7e909e;
+                border: 5px solid #7e909e;
                 border-radius: 20px;
-                width: 250px;
-                min-height: 350px;
+                width: 300px;
+                min-height: 420px;
                 padding: 30px 20px;
                 background-color: $light-grey;
                 color: $shadow-blue;
@@ -1337,11 +1767,20 @@
                 flex-direction: column;
 
                 @include max-tablet {
-                    width: 320px;
+                    width: 480px;
+                    min-height: 650px;
+                    padding: 30px 40px;
+                }
+
+                @include max-phone {
+                    width: 95%;
+                    min-height: 420px;
                 }
 
                 h3 {
-                    margin-bottom: 20px;
+                    font-family: 'malasia';
+                    font-size: 28px;
+                    font-weight: normal;
                 }
 
                 &__detail {
@@ -1351,15 +1790,15 @@
                     justify-content: center;
 
                     p {
-                        font-size: 12px;
-                        line-height: 16px;
+                        font-size: 14px;
+                        line-height: 18px;
 
                         @include max-tablet {
-                            font-size: 18px;
-                            line-height: 22px;
+                            font-size: 26px;
+                            line-height: 32px;
                         }
 
-                        @include max-tablet {
+                        @include max-phone {
                             font-size: 16px;
                             line-height: 20px;
                         }
@@ -1377,9 +1816,14 @@
                 font-weight: 400;
                 font-style: italic;
                 letter-spacing: 3px;
+                font-size: 20px;
 
                 @include max-tablet {
-                    font-size: 22px;
+                    font-size: 32px;
+                }
+
+                @include max-tablet {
+                    font-size: 20px;
                 }
             }
 
@@ -1389,13 +1833,25 @@
                 justify-content: center;
                 gap: 10px;
 
+                @include max-tablet {
+                    gap: 15px;
+                }
+
                 li {
                     a {
                         img {
-                            width: 50px;
+                            width: 65px;
+
+                            @include min-lg-desktop {
+                                width: 85px;
+                            }
 
                             @include max-tablet {
-                                width: 70px;
+                                width: 120px;
+                            }
+
+                            @include max-phone {
+                                width: 80px;
                             }
                         }
                     }
@@ -1416,7 +1872,7 @@
         margin: 0 auto;
 
         @include max-tablet {
-            max-width: 80%;
+            max-width: 700px;
         }
 
         @include max-phone {
@@ -1425,7 +1881,7 @@
 
         .contact-box {
             background-color: $light-grey;
-            max-width: 750px;
+            max-width: 992px;
             margin: 0 auto;
 
             &__inner {
@@ -1440,7 +1896,7 @@
                     background-repeat: no-repeat;
                     background-size: 100% 100%;
                     background-position: center;
-                    min-height: 550px;
+                    min-height: 750px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -1449,7 +1905,7 @@
                     font-style: italic;
 
                     @include max-tablet {
-                        min-height: 450px;
+                        min-height: 500px;
                     }
                     @include max-phone {
                         min-height: 380px;
@@ -1462,43 +1918,62 @@
                         padding-left: 20px;
                         color: $white;
                         font-weight: 200;
-                        margin-top: -50px;
+                        margin-top: -120px;
 
                         @include max-tablet {
                             font-size: 16px;
                             line-height: 20px;
-                            max-width: 45%;
+                            max-width: 40%;
+                            margin-top: -60px;
+                        }
+
+                        @include max-phone {
+                            display: none;
                         }
 
                         p {
-                            font-size: 16px;
-                        }
-
-                        span {
-                            margin-bottom: 7px;
-                            display: block;
-                            line-height: 22px;
-                        }
-
-                        strong {
-                            display: block;
                             font-size: 24px;
-                            line-height: 30px;
 
                             @include max-tablet {
                                 font-size: 16px;
                                 line-height: 20px;
                             }
+                        }
+
+                        span {
+                            margin-bottom: 7px;
+                            display: block;
+                            font-size: 28px;
+                            line-height: 32px;
+
+                            @include max-tablet {
+                                font-size: 18px;
+                                line-height: 20px;
+                                margin-bottom: 15px;
+                            }
+                        }
+
+                        strong {
+                            display: block;
+                            font-size: 34px;
+                            line-height: 40px;
+
+                            @include max-tablet {
+                                font-size: 20px;
+                                line-height: 24px;
+                                max-width: 180px;
+                            }
 
                             &.number {
                                 font-family: 'Montserrat';
                                 font-style: normal;
-                                font-size: 28px;
-                                line-height: 30px;
+                                font-size: 44px;
+                                line-height: 48px;
 
                                 @include max-tablet {
-                                    font-size: 16px;
-                                    line-height: 20px;
+                                    font-size: 30px;
+                                    line-height: 34px;
+                                    max-width: 220px;
                                 }
                             }
                         }
@@ -1508,16 +1983,20 @@
                             align-items: center;
                             justify-content: flex-start;
                             gap: 10px;
-                            margin: 15px 0;
+                            margin: 20px 0;
 
                             @include max-tablet {
-                                margin: 10px 0;
+                                margin: 15px 0;
                             }
 
                             li {
                                 a {
                                     img {
-                                        width: 50px;
+                                        width: 75px;
+
+                                        @include max-tablet {
+                                            width: 60px;
+                                        }
                                     }
                                 }
                             }

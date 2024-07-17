@@ -10,39 +10,12 @@
     background-color: $light-grey;
 
     &__inner {
-        .outdoor-box {
-            max-width: 750px;
-            margin: 0 auto;
-
-            &__image {
-                display: flex;
-                gap: 15px;
-                margin-bottom: 10px;
-            }
-
-            &__text {
-                color: $shadow-blue;
-
-                p {
-                    font-size: 20px;
-                    line-height: 24px;
-                }
-            }
-        }
-    }
-}
-
-.outdoor-main-section {
-    padding: 40px 0 80px;
-    background-color: $light-grey;
-
-    &__inner {
         @include max-phone {
             padding: 0 20px;
         }
 
         .outdoor-box {
-            max-width: 550px;
+            max-width: 710px;
             margin: 0 auto;
 
             &__image {
@@ -73,8 +46,14 @@
                 color: $shadow-blue;
 
                 p {
-                    font-size: 18px;
-                    line-height: 24px;
+                    font-size: 25px;
+                    line-height: 30px;
+
+                    @include max-phone {
+                        font-size: 20px;
+                        line-height: 24px;
+                        padding: 0 20px;
+                    }
 
                     strong {
                         font-weight: 700;
@@ -93,7 +72,7 @@
     }
 
     &__content {
-        max-width: 750px;
+        max-width: 992px;
         margin: 0 auto;
         display: flex;
         gap: 10px;
@@ -133,9 +112,9 @@
 
             p {
                 @include max-tablet {
-                    font-size: 20px;
-                    line-height: 24px;
-                    padding: 10px 10px;
+                    font-size: 25px;
+                    line-height: 30px;
+                    padding: 10px 30px;
                 }
 
                 @include max-phone {
@@ -232,7 +211,7 @@
     justify-content: center;
     opacity: 0.8;
 
-    @include min-phone {
+    @include max-phone {
         position: static;
         margin-top: 5px;
         background-color: $shadow-blue;
@@ -246,7 +225,7 @@
         img {
             width: 250px;
 
-            @include min-phone {
+            @include max-phone {
                 width: 280px;
             }
         }

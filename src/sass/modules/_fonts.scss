@@ -200,6 +200,15 @@
 }
 
 @font-face {
+    font-family: 'malasia';
+    src: url($imgPrefix + 'fonts/malisia-script.woff2') format('woff2'),
+        url($imgPrefix + 'fonts/malisia-script.woff') format('woff'),
+        url($imgPrefix + 'fonts/malisia-script.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'icomoon';
     src: url($imgPrefix + 'fonts/icomoon.eot?xexxxz');
     src: url($imgPrefix + 'fonts/icomoon.eot?xexxxz#iefix')

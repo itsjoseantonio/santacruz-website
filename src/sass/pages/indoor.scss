@@ -15,7 +15,7 @@
         }
 
         .indoor-box {
-            max-width: 650px;
+            max-width: 730px;
             margin: 0 auto;
 
             &__image {
@@ -45,8 +45,14 @@
                 color: $shadow-blue;
 
                 p {
-                    font-size: 18px;
-                    line-height: 24px;
+                    font-size: 25px;
+                    line-height: 30px;
+
+                    @include max-phone {
+                        font-size: 20px;
+                        line-height: 24px;
+                        padding: 0 20px;
+                    }
 
                     strong {
                         font-weight: 700;
@@ -61,7 +67,7 @@
     padding: 20px 0 80px;
 
     &__content {
-        max-width: 750px;
+        max-width: 992px;
         margin: 0 auto;
         display: flex;
         gap: 10px;
@@ -72,16 +78,16 @@
         }
 
         .gallery-general {
-            @include max-phone {
+            @include max-tablet {
                 flex-direction: column;
                 gap: 20px;
             }
 
             p {
-                @include max-phone {
-                    font-size: 20px;
-                    line-height: 24px;
-                    padding: 10px 20px;
+                @include max-tablet {
+                    font-size: 25px;
+                    line-height: 30px;
+                    padding: 10px 30px;
                 }
 
                 @include max-phone {
@@ -106,7 +112,7 @@
             &__left {
                 flex-basis: 65%;
 
-                @include max-phone {
+                @include max-tablet {
                     gap: 20px;
                 }
             }
@@ -114,7 +120,7 @@
             &__right {
                 flex-basis: 35%;
 
-                @include max-phone {
+                @include max-tablet {
                     gap: 20px;
                 }
             }

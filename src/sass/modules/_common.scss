@@ -42,25 +42,31 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    font-family: 'Montserrat';
+    font-family: 'loew-italic';
     font-weight: 500;
     font-style: italic;
 
     @include max-tablet {
-        width: 95%;
+        width: 90%;
         margin: 0 auto;
+        padding: 40px 0 60px;
     }
 
     h2 {
-        font-size: 36px;
+        font-size: 42px;
         font-weight: normal;
         letter-spacing: 1px;
-        line-height: 36px;
+        line-height: 42px;
+
+        @include min-lg-desktop {
+            font-size: 48px;
+            line-height: 46px;
+        }
 
         @include max-tablet {
-            font-size: 48px;
-            line-height: 56px;
-            padding: 0 120px;
+            font-size: 64px;
+            line-height: 84px;
+            padding: 0 30px;
             font-weight: 200;
         }
 
@@ -73,16 +79,20 @@ html {
 
     p {
         margin-top: 8px;
-        font-size: 18px;
+        font-size: 20px;
         letter-spacing: 1px;
 
+        @include min-lg-desktop {
+            font-size: 24px;
+        }
+
         @include max-tablet {
-            font-size: 22px;
-            line-height: 26px;
-            max-width: 350px;
+            font-size: 32px;
+            line-height: 36px;
+            max-width: 460px;
             border-top: 1px solid $white;
             border-bottom: 1px solid $white;
-            padding: 10px;
+            padding: 15px 0 20px;
             margin: 0 auto;
             font-weight: 200;
             opacity: 0.8;
@@ -92,6 +102,8 @@ html {
         @include max-phone {
             font-size: 20px;
             line-height: 22px;
+            padding: 15px 05px 20px;
+            max-width: 90%;
         }
     }
 }
@@ -131,12 +143,12 @@ html {
 
             h1 {
                 font-weight: 100;
-                font-size: 56px;
-                line-height: 56px;
+                font-size: 64px;
+                line-height: 66px;
 
                 @include max-phone {
-                    font-size: 36px;
-                    line-height: 36px;
+                    font-size: 44px;
+                    line-height: 44px;
                 }
             }
 
@@ -170,7 +182,8 @@ html {
 
     p {
         margin-top: 5px;
-        line-height: 18px;
+        line-height: 24px;
+        font-size: 20px;
     }
 
     &__left {
@@ -180,7 +193,7 @@ html {
         gap: 10px;
 
         &.preboda-1 {
-            min-width: 460px;
+            min-width: 612px;
 
             @include max-phone {
                 min-width: 100%;
@@ -210,7 +223,7 @@ html {
         gap: 10px;
 
         &.preboda-2 {
-            min-width: 460px;
+            min-width: 612px;
 
             @include max-phone {
                 min-width: 100%;
