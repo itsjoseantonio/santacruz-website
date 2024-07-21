@@ -2,6 +2,8 @@ extends ./layouts/_default.pug
 
 block variables
     - var imgPrefixUrl = IMG_PREFIX_URL
+    - var title = 'Santa Cruz Fotografía - Sesiones Outdoor'
+    - var description = 'Descubre el secreto para lucir increíble en una sesión de fotos Outdoor . Llámanos o escríbenos y atenderemos todas tus consultas.'
 
 block content
     header.outdoor-header.page-header
@@ -65,7 +67,7 @@ block content
                             img(src=imgPrefixUrl+"images/outdoor/photo9.jpg" alt="Gallery")
                 .gallery-general
                     .gallery-general__full
-                        .gallery-general__full__image
+                        .gallery-general__full__image.contact
                             img(src=imgPrefixUrl+"images/outdoor/photo10.jpg" alt="Gallery")
                         .box-contact
                             .box-contact__top
@@ -79,12 +81,12 @@ block content
                 .alsolike-box
                     h2 También te puede interesar
                     .alsolike-box__content
-                        a(href="/proboda.html").alsolike-box__content__item
+                        a(href="proboda.html").alsolike-box__content__item
                             img(src=imgPrefixUrl+"images/preboda.jpg" alt="Preboda")
                             h3 Sesiones Preboda
-                        a(href="/indoor.html").alsolike-box__content__item
+                        a(href="indoor.html").alsolike-box__content__item
                             img(src=imgPrefixUrl+"images/makeup.jpg" alt="Makeup")
                             h3 Sesiones Makeup
-                        a(href="/indoor.html").alsolike-box__content__item
+                        a(href="indoor.html").alsolike-box__content__item
                             img(src=imgPrefixUrl+"images/indoor.jpg" alt="Indoor")
                             h3 Sesiones Indoor

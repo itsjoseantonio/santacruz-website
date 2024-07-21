@@ -79,7 +79,7 @@
         flex-direction: column;
 
         @include max-tablet {
-            padding: 0 30px;
+            padding: 0 20px;
             gap: 20px;
         }
 
@@ -145,6 +145,8 @@
             }
 
             &__col-50 {
+                width: 71%;
+
                 @include max-tablet {
                     width: 100%;
                     gap: 20px;
@@ -190,6 +192,30 @@
                 }
             }
 
+            &__full {
+                &__image {
+                    &.contact {
+                        @include max-tablet {
+                            height: 220px;
+                        }
+
+                        img {
+                            @include max-tablet {
+                                height: 100%;
+                                object-fit: cover;
+                                object-position: center;
+                            }
+
+                            @include max-tablet {
+                                height: 100%;
+                                object-fit: cover;
+                                object-position: -65px center;
+                            }
+                        }
+                    }
+                }
+            }
+
             .show-tablet {
                 @include min-desktop {
                     display: none;
@@ -202,7 +228,7 @@
 .box-contact {
     position: absolute;
     top: 0;
-    right: 50px;
+    right: 40px;
     height: 100%;
     flex-direction: column;
     color: $white;
@@ -226,7 +252,7 @@
             width: 350px;
 
             @include max-tablet {
-                width: 250px;
+                width: 310px;
             }
 
             @include max-phone {
@@ -243,7 +269,7 @@
         padding-top: 10px;
 
         i {
-            font-size: 32px;
+            font-size: 40px;
         }
 
         p {
@@ -252,10 +278,10 @@
             line-height: 15px !important;
 
             @include max-tablet {
-                font-size: 12px !important;
-                line-height: 13px !important;
+                font-size: 14px !important;
+                line-height: 16px !important;
                 padding: 0 !important;
-                max-width: 180px;
+                max-width: 210px;
             }
 
             @include max-phone {

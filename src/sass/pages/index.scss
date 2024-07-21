@@ -10,11 +10,17 @@
     }
 
     &__logo {
-        max-width: 400px;
+        max-width: 450px;
         position: absolute;
         left: 50%;
-        margin-left: -200px;
+        margin-left: -225px;
         top: 180px;
+
+        @include min-lg-desktop {
+            top: 215px;
+            max-width: 520px;
+            margin-left: -260px;
+        }
 
         @include max-tablet {
             max-width: 500px;
@@ -42,6 +48,7 @@
         @include max-phone {
             max-width: 160px;
             margin-left: -75px;
+            bottom: 80px;
         }
 
         p {
@@ -172,6 +179,12 @@
                     font-style: italic;
                     font-weight: 400;
 
+                    @include min-lg-desktop {
+                        margin-top: -92px;
+                        font-size: 40px;
+                        line-height: 44px;
+                    }
+
                     @include max-tablet {
                         margin-top: -86px;
                         font-size: 28px;
@@ -200,6 +213,10 @@
                         font-size: 34px;
                         line-height: 34px;
 
+                        @include min-lg-desktop {
+                            font-size: 40px;
+                        }
+
                         @include max-tablet {
                             font-size: 28px;
                             line-height: 28px;
@@ -208,6 +225,11 @@
 
                     small {
                         font-size: 20px;
+
+                        @include min-lg-desktop {
+                            font-size: 24px;
+                            line-height: 28px;
+                        }
 
                         @include max-tablet {
                             font-size: 28px;
@@ -384,9 +406,9 @@
                 }
 
                 @include max-phone {
-                    width: 270px;
-                    height: 270px;
-                    padding: 0 35px;
+                    width: 250px;
+                    height: 250px;
+                    padding: 0 25px;
                     font-size: 16px;
                 }
 
@@ -412,8 +434,8 @@
                     }
 
                     @include max-phone {
-                        width: 270px;
-                        height: 270px;
+                        width: 250px;
+                        height: 250px;
                     }
                 }
 
@@ -439,8 +461,8 @@
                     }
 
                     @include max-phone {
-                        width: 270px;
-                        height: 270px;
+                        width: 250px;
+                        height: 250px;
                     }
                 }
 
@@ -471,7 +493,7 @@
                 }
 
                 @include max-phone {
-                    max-width: 220px;
+                    max-width: 210px;
                 }
             }
         }
@@ -486,11 +508,13 @@
             max-width: 1120px;
             margin: 0 auto;
             padding: 40px;
-            border: 2px dashed #eee;
+            background-image: url($imgPrefix + 'images/home/weare-bg-lines.png');
+            background-size: 100% 100%;
 
             @include max-tablet {
                 padding: 0;
                 border: 0;
+                background-image: none;
             }
 
             &__inner {
@@ -537,6 +561,7 @@
                             p {
                                 font-size: 28px;
                                 line-height: 32px;
+                                text-shadow: 1px 1px 5px #7e7e7e;
 
                                 span {
                                     display: block;
@@ -561,6 +586,7 @@
                                 max-width: 65%;
                                 font-family: 'Montserrat';
                                 font-style: italic;
+                                text-shadow: 1px 1px 5px #7e7e7e;
                             }
                         }
                     }
@@ -585,6 +611,7 @@
                         p {
                             font-size: 42px;
                             line-height: 48px;
+                            text-shadow: 1px 1px 5px #7e7e7e;
 
                             @include max-phone {
                                 font-size: 24px;
@@ -629,6 +656,12 @@
                 }
             }
         }
+    }
+}
+
+.fav-section {
+    &.header-title {
+        background-image: url($imgPrefix + 'images/home/header-bg-tablet.jpg');
     }
 }
 
@@ -714,7 +747,7 @@
                 }
 
                 @include max-phone {
-                    font-size: 40px;
+                    font-size: 50px;
                     line-height: 44px;
                     border: 5px solid $white;
                     padding: 5px;
@@ -740,6 +773,7 @@
                     max-width: 420px;
                     margin-left: auto;
                     margin-bottom: 30px;
+                    text-shadow: 1px 1px 5px #7e7e7e;
                 }
 
                 @include max-phone {
@@ -784,6 +818,7 @@
                         padding-right: 0;
                         font-size: 20px;
                         line-height: 24px;
+                        text-shadow: 1px 1px 5px #7e7e7e;
                     }
 
                     @include max-phone {
@@ -1042,7 +1077,7 @@
         }
 
         @include max-tablet {
-            width: 80%;
+            width: 100%;
         }
 
         h2 {
@@ -1055,12 +1090,16 @@
 
             @include max-tablet {
                 font-size: 60px;
-                margin-bottom: 10px;
+                margin-bottom: 20px;
+                max-width: 80%;
+                margin: 0 auto 20px;
             }
 
             @include max-phone {
                 text-align: center;
                 font-size: 54px;
+                width: 80%;
+                margin: 0 auto 20px;
             }
 
             strong {
@@ -1101,7 +1140,7 @@
 
             img.mobile {
                 display: none;
-                width: 90%;
+                width: 100%;
                 margin: 0 auto;
 
                 @include max-tablet {
@@ -1134,6 +1173,8 @@
                 @include max-tablet {
                     font-size: 25px;
                     line-height: 29px;
+                    width: 80%;
+                    margin: 0 auto;
                 }
 
                 @include max-phone {
@@ -1349,20 +1390,27 @@
 .client-section {
     background-color: $light-grey;
 
+    .header-title {
+        @include max-tablet {
+            background-image: url($imgPrefix + 'images/home/header-bg-phone.jpg');
+            padding: 60px 0;
+        }
+    }
+
     @include max-tablet {
         padding-top: 30px;
     }
 
     .header-title {
-        padding: 100px 0;
-
         @include max-phone {
             padding: 60px 0;
         }
 
         h2 {
-            font-size: 60px;
-            padding: 0 10px;
+            @include max-tablet {
+                font-size: 60px;
+                padding: 0 10px;
+            }
 
             @include max-phone {
                 font-size: 36px;
@@ -1397,8 +1445,8 @@
             }
 
             &__item {
-                max-width: 320px;
-                padding: 25px 35px 40px 35px;
+                max-width: 360px;
+                padding: 35px 35px 40px 35px;
                 text-align: center;
                 border-radius: 14px;
                 box-shadow: -2px 5px 8px #d4d4d4;
@@ -1411,17 +1459,25 @@
 
                 @include max-tablet {
                     max-width: 600px;
-                    padding: 30px 50px 45px;
+                    padding: 35px 50px 45px;
                 }
 
                 h3 {
-                    margin-bottom: 5px;
-                    font-size: 22px;
+                    font-size: 26px;
+                    line-height: 46px;
                     font-family: 'malasia';
                     font-weight: normal;
+                    margin-bottom: 15px;
 
                     @include max-tablet {
                         margin-bottom: 20px;
+                        font-size: 40px;
+                        line-height: 60px;
+                    }
+
+                    @include max-phone {
+                        font-size: 28px;
+                        line-height: 48px;
                     }
                 }
 
@@ -1439,7 +1495,7 @@
                         line-height: 30px;
                     }
 
-                    @include max-tablet {
+                    @include max-phone {
                         font-size: 18px;
                         line-height: 22px;
                     }
@@ -1467,11 +1523,11 @@
         padding: 85px 0;
         margin-bottom: 30px;
         min-height: 420px;
-        background-position: center right -100px;
+        background-image: url($imgPrefix + 'images/home/disfruta-tablet.jpg');
     }
 
     @include max-phone {
-        background-position: center right -90px;
+        background-image: url($imgPrefix + 'images/home/disfruta-phone.jpg');
     }
 
     &__inner {
@@ -1506,8 +1562,8 @@
             }
 
             @include max-phone {
-                font-size: 20px;
-                line-height: 24px;
+                font-size: 22px;
+                line-height: 26px;
                 position: absolute;
                 left: 20px;
                 bottom: 20px;
@@ -1530,8 +1586,8 @@
                 }
 
                 @include max-phone {
-                    font-size: 20px;
-                    line-height: 24px;
+                    font-size: 22px;
+                    line-height: 26px;
                 }
 
                 &.first {
@@ -1549,8 +1605,8 @@
                     }
 
                     @include max-phone {
-                        font-size: 32px;
-                        line-height: 36px;
+                        font-size: 40px;
+                        line-height: 40px;
                     }
                 }
             }
@@ -1560,15 +1616,20 @@
 
 .howdo-section {
     .header-title {
-        padding: 70px 0;
+        @include max-tablet {
+            background-image: url($imgPrefix + 'images/home/header-bg-phone.jpg');
+            padding: 60px 0;
+        }
 
         @include max-phone {
             padding: 0;
         }
 
         h2 {
-            font-size: 39px;
-            line-height: 52px;
+            @include max-tablet {
+                font-size: 40px;
+                line-height: 52px;
+            }
 
             @include max-phone {
                 padding: 50px 10px;
@@ -1694,6 +1755,7 @@
 
     @include max-phone {
         padding: 50px 0;
+        background-image: url($imgPrefix + 'images/section-bg-phone.png');
     }
 
     &__inner {
@@ -1759,7 +1821,7 @@
                 border: 5px solid #7e909e;
                 border-radius: 20px;
                 width: 300px;
-                min-height: 420px;
+                min-height: 440px;
                 padding: 30px 20px;
                 background-color: $light-grey;
                 color: $shadow-blue;
@@ -1768,20 +1830,58 @@
                 flex-direction: column;
 
                 @include max-tablet {
-                    width: 480px;
-                    min-height: 650px;
-                    padding: 30px 40px;
+                    width: 500px;
+                    min-height: 680px;
+                    padding: 60px 45px 30px;
                 }
 
                 @include max-phone {
                     width: 95%;
-                    min-height: 420px;
+                    min-height: 450px;
+                    padding-top: 40px;
+                }
+
+                &:first-child {
+                    h3 {
+                        @include max-tablet {
+                            margin-bottom: 110px;
+                        }
+                        @include max-phone {
+                            margin-bottom: 60px;
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    h3 {
+                        @include max-tablet {
+                            margin-bottom: 80px;
+                        }
+
+                        @include max-phone {
+                            margin-bottom: 40px;
+                        }
+                    }
                 }
 
                 h3 {
                     font-family: 'malasia';
-                    font-size: 28px;
+                    font-size: 32px;
+                    line-height: 52px;
                     font-weight: normal;
+                    margin-bottom: 10px;
+
+                    @include max-tablet {
+                        font-size: 56px;
+                        height: 76px;
+                        margin-bottom: 30px;
+                    }
+
+                    @include max-phone {
+                        font-size: 36px;
+                        line-height: 56px;
+                        margin-bottom: 20px;
+                    }
                 }
 
                 &__detail {
@@ -1832,7 +1932,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                gap: 10px;
+                gap: 15px;
 
                 @include max-tablet {
                     gap: 15px;
@@ -1866,7 +1966,7 @@
     padding: 100px 0;
 
     @include max-phone {
-        padding: 60px 0;
+        padding: 60px 0 0;
     }
 
     &__inner {
@@ -1909,7 +2009,8 @@
                         min-height: 500px;
                     }
                     @include max-phone {
-                        min-height: 380px;
+                        min-height: 550px;
+                        background-image: url($imgPrefix + 'images/home/contacto-home-mobile.jpg');
                     }
 
                     &__text {
@@ -2002,6 +2103,49 @@
                                 }
                             }
                         }
+                    }
+                }
+
+                .contact-box-mobile {
+                    color: $shadow-blue;
+                    padding: 20px 40px 60px;
+                    text-align: center;
+                    font-family: 'Montserrat';
+                    font-style: italic;
+
+                    @include min-tablet {
+                        display: none;
+                    }
+
+                    p {
+                        font-size: 18px;
+                        margin-bottom: 10px;
+                    }
+
+                    strong {
+                        font-weight: 700;
+                        font-size: 20px;
+
+                        &.number {
+                            font-size: 26px;
+                        }
+                    }
+
+                    ul {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+                        margin: 15px 0;
+                    }
+
+                    span {
+                        font-size: 14px;
+                    }
+
+                    strong,
+                    span {
+                        display: block;
                     }
                 }
             }

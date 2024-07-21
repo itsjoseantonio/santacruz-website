@@ -22,6 +22,10 @@
             max-width: 840px;
             margin: 0 auto;
 
+            @include max-tablet {
+                max-width: 600px;
+            }
+
             &__image {
                 display: flex;
                 gap: 10px;
@@ -66,6 +70,11 @@
 
         @include max-tablet {
             gap: 20px;
+            padding: 0 20px;
+        }
+
+        @include max-phone {
+            padding: 0;
         }
 
         .gallery-general {
@@ -73,17 +82,33 @@
                 gap: 20px;
             }
 
+            &.full-width {
+                @include max-tablet {
+                    margin-left: -20px;
+                    margin-right: -20px;
+                    overflow: hidden;
+                }
+
+                @include max-phone {
+                    margin-left: 0px;
+                    margin-right: 0px;
+                    overflow: visible;
+                }
+            }
+
             p {
+                margin-top: 20px;
+
                 @include max-tablet {
                     font-size: 20px;
                     line-height: 24px;
-                    padding: 10px 0;
+                    padding: 10px 20px;
                 }
 
                 @include max-phone {
                     font-size: 16px;
                     line-height: 20px;
-                    padding: 10px 0;
+                    padding: 10px 20px;
                 }
             }
 
@@ -135,8 +160,16 @@
 
                     @include max-tablet {
                         flex-basis: 100%;
-                        padding-left: 15px;
-                        padding-right: 15px;
+                    }
+                }
+            }
+
+            &__full {
+                &__image {
+                    &.full-width {
+                        @include max-tablet {
+                            width: 100%;
+                        }
                     }
                 }
             }

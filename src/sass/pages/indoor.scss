@@ -73,8 +73,13 @@
         gap: 10px;
         flex-direction: column;
 
-        @include max-phone {
+        @include max-tablet {
             gap: 20px;
+            padding: 0 20px;
+        }
+
+        @include max-phone {
+            padding: 0;
         }
 
         .gallery-general {

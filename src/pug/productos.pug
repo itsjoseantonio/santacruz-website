@@ -2,6 +2,8 @@ extends ./layouts/_default.pug
 
 block variables
     - var imgPrefixUrl = IMG_PREFIX_URL
+    - var title = 'Santa Cruz Fotografía - Arte y belleza para tu boda'
+    - var description = 'Sesiones de fotos para Screensavers, Partes Virtuales, Cuadros decorativos, Fotobooks, y mucho más. Visíta nuestra web y descubre piezas únicas para tu boda.'
 
 block content
     header.products-header.page-header
@@ -39,7 +41,8 @@ block content
             .custom-section__inner
                 h2 #[strong Pack Fondos Personalizados de] Pantalla
                 .custom-content
-                    img(src=imgPrefixUrl+"images/home/fondos-personalizados.png" alt="fondos personalizados")
+                    img(src=imgPrefixUrl+"images/home/fondos-personalizados.png" alt="fondos personalizados").desktop
+                    img(src=imgPrefixUrl+"images/home/fondos-personalizados-mobile-alt.png" alt="fondos personalizados").mobile
                     p Una exclusiva colección con increíbles fotos personalizadas y listas para instalarse como fondos de pantalla en todos tus dispositivos.
     section.date-section
         .container 
@@ -71,6 +74,16 @@ block content
                         span.border
                         span.border
                         p Foto Wall - Lienzo de Bienvenida - Álbum de Firmas
+                .art-content-mobile
+                    .art-content-mobile__item
+                        img(src=imgPrefixUrl+"images/home/foto-wall.png" alt="Foto wall")
+                        p Foto Wall
+                    .art-content-mobile__item
+                        img(src=imgPrefixUrl+"images/home/lienzo.png" alt="Lienzo de Bienvenida")
+                        p Lienzo de Bienvenida
+                    .art-content-mobile__item
+                        img(src=imgPrefixUrl+"images/home/album.png" alt="Álbum de Firmas")
+                        p Álbum de Firmas
     
     section.printed-section
         .container 

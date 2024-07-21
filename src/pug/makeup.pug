@@ -2,6 +2,8 @@ extends ./layouts/_default.pug
 
 block variables
     - var imgPrefixUrl = IMG_PREFIX_URL
+    - var title = 'Santa Cruz Fotografía - Sesiones Makeup'
+    - var description = 'Destacamos tu belleza en cada foto. Cada Sesión de fotos Makeup es una historia de color y belleza. Escoge el paquete que más te guste.'
 
 block content
     header.makeup-header.page-header
@@ -34,7 +36,7 @@ block content
                         .gallery-general__left__item
                             .gallery-general__left__item__image
                                 img(src=imgPrefixUrl+"images/makeup/photo3.jpg" alt="Gallery")
-                            p Esta sesión es el pnto de inicio en el día de tu boda. Puede durar entre 60 y 90 minutos.
+                            p Esta sesión es el punto de inicio en el día de tu boda. Puede durar entre 60 y 90 minutos.
                         .gallery-general__left__item
                             img(src=imgPrefixUrl+"images/makeup/photo4.jpg" alt="Gallery")
                     .gallery-general__right
@@ -45,7 +47,7 @@ block content
                         .gallery-general__right__item
                             .gallery-general__right__item__image
                                 img(src=imgPrefixUrl+"images/makeup/photo7.jpg" alt="Gallery")
-                            p Mientras tu maquillaje avanza, recreamos un elegante escenario, para fotografiar tu outfit y accesorios
+                            p Mientras tu maquillaje avanza, recreamos un elegante escenario, para fotografiar tu outfit y accesorios.
                         .gallery-general__right__item
                             img(src=imgPrefixUrl+"images/makeup/photo8.jpg" alt="Gallery")
     section.gallery-men
@@ -73,12 +75,12 @@ block content
                 .alsolike-box
                     h2 También te puede interesar
                     .alsolike-box__content
-                        a(href="/proboda.html").alsolike-box__content__item
+                        a(href="proboda.html").alsolike-box__content__item
                             img(src=imgPrefixUrl+"images/preboda.jpg" alt="Preboda")
                             h3 Sesiones Preboda
-                        a(href="/indoor.html").alsolike-box__content__item
+                        a(href="indoor.html").alsolike-box__content__item
                             img(src=imgPrefixUrl+"images/indoor.jpg" alt="Indoor")
                             h3 Sesiones Indoor
-                        a(href="/outdoor").alsolike-box__content__item
+                        a(href="outdoor").alsolike-box__content__item
                             img(src=imgPrefixUrl+"images/outdoor.jpg" alt="Indoor")
                             h3 Sesiones Outdoor

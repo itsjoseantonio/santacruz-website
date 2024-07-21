@@ -2,6 +2,8 @@ extends ./layouts/_default.pug
 
 block variables
 	- var imgPrefixUrl = IMG_PREFIX_URL
+	- var title = 'Santa Cruz Fotografía'
+	- var description = 'Fotógrafo de bodas en Lima especializado en hacerte lucir espectacular. Consigue imágenes únicas con Santa Cruz Fotografía. Reserva ahora.'
 
 block content
 	include ./partials/_navbar.pug
@@ -70,10 +72,10 @@ block content
 							p Escríbenos para agendar una #[span fecha disponible, y descubre como] #[strong lucir increíble] en cada foto.
 							ul
 								li
-									a(href="/" target="_blank") 
+									a(href="https://wa.me/+51992174324?text=Hola,%20quisiera%20más%20información" target="_blank") 
 										img(src=imgPrefixUrl+"images/icons/icon-whatsapp.png", alt="")
 								li
-									a(href="/" target="_blank")
+									a(href="mailto:contacto@santacruzfoto.com" target="_blank")
 										img(src=imgPrefixUrl+"images/icons/icon-mail.png", alt="")
 								li
 									a(href="/" target="_blank")
@@ -112,7 +114,7 @@ block content
 					h2 #[strong Pack Fondos Personalizados de] Pantalla
 					.custom-content
 						img(src=imgPrefixUrl+"images/home/fondos-personalizados.png" alt="fondos personalizados").desktop
-						img(src=imgPrefixUrl+"images/home/fondos-personalizados-mobile.png" alt="fondos personalizados").mobile
+						img(src=imgPrefixUrl+"images/home/fondos-personalizados-mobile-alt.png" alt="fondos personalizados").mobile
 						p Una exclusiva colección con increíbles fotos personalizadas y listas para instalarse como fondos de pantalla en todos tus dispositivos.
 		section.art-section
 			.container
@@ -181,12 +183,12 @@ block content
 						.packages-list__item
 							h3 encanto
 							.packages-list__item__detail
-								p Asesoría Fotográfica 
-								p Sesión Pre Boda 
-								p Boda Religiosa 
-								p Boda Civil 
-								p 1 Fotógrafo 
-								p Edición de Fotos 
+								p Asesoría Fotográfica
+								p Sesión Pre Boda
+								p Boda Civil
+								p Boda Religiosa
+								p 1 Fotógrafo
+								p Edición de Fotos
 								p Fotobook Digital (1 Mes)
 						.packages-list__item
 							h3 ensueño
@@ -218,10 +220,10 @@ block content
 						p CONVERSEMOS
 						ul
 							li
-								a(href="/" target="_blank") 
+								a(href="https://wa.me/+51992174324?text=Hola,%20quisiera%20más%20información" target="_blank") 
 									img(src=imgPrefixUrl+"images/icons/icon-whatsapp.png", alt="whatsapp")
 							li
-								a(href="/" target="_blank")
+								a(href="mailto:contacto@santacruzfoto.com" target="_blank")
 									img(src=imgPrefixUrl+"images/icons/icon-mail.png", alt="mail")
 							li
 								a(href="/" target="_blank")
@@ -237,13 +239,28 @@ block content
 									strong ¿POR QUÉ ESPERAR MÁS?
 									ul
 										li
-											a(href="/" target="_blank") 
+											a(href="https://wa.me/+51992174324?text=Hola,%20quisiera%20más%20información" target="_blank") 
 												img(src=imgPrefixUrl+"images/icons/icon-whatsapp.png", alt="whatsapp")
 										li
-											a(href="/" target="_blank")
+											a(href="mailto:contacto@santacruzfoto.com" target="_blank")
 												img(src=imgPrefixUrl+"images/icons/icon-mail.png", alt="mail")
 										li
 											a(href="/" target="_blank")
 												img(src=imgPrefixUrl+"images/icons/icon-msn.png", alt="msn")
 									p Escríbenos o llámanos
-									strong.number 982-141-940
+									strong.number 992-174-324
+							.contact-box-mobile
+								p Estuvimos esperando este día tanto como tú.
+								strong ¿POR QUÉ ESPERAR MÁS?
+								ul
+									li
+										a(href="/" target="_blank") 
+											img(src=imgPrefixUrl+"images/icons/whatsapp-azul.png", alt="whatsapp")
+									li
+										a(href="/" target="_blank")
+											img(src=imgPrefixUrl+"images/icons/email-azul.png", alt="mail")
+									li
+										a(href="/" target="_blank")
+											img(src=imgPrefixUrl+"images/icons/msn-azul.png", alt="msn")
+								span Escríbenos o llámanos
+								strong.number 992-174-324

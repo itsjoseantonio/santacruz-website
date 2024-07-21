@@ -2,6 +2,8 @@ extends ./layouts/_default.pug
 
 block variables
     - var imgPrefixUrl = IMG_PREFIX_URL
+    - var title = 'Santa Cruz Fotografía - Sesiones Preboda'
+    - var description = 'Enamórate de tu sesión de fotos preboda. Contáctanos para más información y déjate sorprender con la magia que hay detrás de cada escenario.'
 
 block content
     header.prewedding-header.page-header
@@ -27,33 +29,40 @@ block content
                 .gallery-general
                     .gallery-general__left.preboda-1
                         .gallery-general__left__item
-                            img(src=imgPrefixUrl+"images/preboda/photo1.jpg" alt="Gallery")
-                        .gallery-general__left__item
-                            img(src=imgPrefixUrl+"images/preboda/photo2.jpg" alt="Gallery")
+                            .gallery-general__left__item__image
+                                img(src=imgPrefixUrl+"images/preboda/photo1.jpg" alt="Gallery")
                         .gallery-general__left__item
                             .gallery-general__left__item__image
+                                img(src=imgPrefixUrl+"images/preboda/photo2.jpg" alt="Gallery")
+                        .gallery-general__left__item.no-overflow
+                            img(src=imgPrefixUrl+"images/preboda/paleta.jpg" alt="Paleta").paleta
+                            .gallery-general__left__item__image
                                 img(src=imgPrefixUrl+"images/preboda/photo3.jpg" alt="Gallery")
-                            p Cada sesión se basa en una paleta de colores que creamos y personalizamos para cada pareja.
+                            p.text-paleta Cada sesión se basa en una paleta de colores que creamos y personalizamos para cada pareja.
                     .gallery-general__right
                         .gallery-general__right__item
                             .gallery-general__left__item__image
                                 img(src=imgPrefixUrl+"images/preboda/photo4.jpg" alt="Gallery")
-                            p De acuerdo a la estación del año, y la hora del día, coordinamos el lugar y momento ideal para retratar esta hermosa experiencia
+                            p De acuerdo a la estación del año, y la hora del día, coordinamos el lugar y momento ideal para retratar esta hermosa experiencia.
                         .gallery-general__right__item
-                            img(src=imgPrefixUrl+"images/preboda/photo5.jpg" alt="Gallery")
+                            .gallery-general__left__item__image
+                                img(src=imgPrefixUrl+"images/preboda/photo5.jpg" alt="Gallery")
                 .gallery-general
                     .gallery-general__left
                         .gallery-general__left__item
-                            img(src=imgPrefixUrl+"images/preboda/photo6.jpg" alt="Gallery")
+                            .gallery-general__left__item__image
+                                img(src=imgPrefixUrl+"images/preboda/photo6.jpg" alt="Gallery")
                         .gallery-general__left__item
                             .gallery-general__left__item__image
                                 img(src=imgPrefixUrl+"images/preboda/photo7.jpg" alt="Gallery")
                             p Contamos con una ampia lista de escenarios listos para plasmar tu historia de amor.
                     .gallery-general__right.preboda-2
                         .gallery-general__right__item
-                            img(src=imgPrefixUrl+"images/preboda/photo8.jpg" alt="Gallery")
+                            .gallery-general__left__item__image
+                                img(src=imgPrefixUrl+"images/preboda/photo8.jpg" alt="Gallery")
                         .gallery-general__right__item
-                            img(src=imgPrefixUrl+"images/preboda/photo9.jpg" alt="Gallery")
+                            .gallery-general__left__item__image
+                                img(src=imgPrefixUrl+"images/preboda/photo9.jpg" alt="Gallery")
                 .gallery-general.column
                     .gallery-general__full
                         .gallery-general__full__image
@@ -68,12 +77,12 @@ block content
                 .alsolike-box
                     h2 También te puede interesar...
                     .alsolike-box__content
-                        a(href="/makeup.html").alsolike-box__content__item
+                        a(href="makeup.html").alsolike-box__content__item
                             img(src=imgPrefixUrl+"images/makeup.jpg" alt="Makeup")
                             h3 Sesiones Makeup
-                        a(href="/indoor.html").alsolike-box__content__item
+                        a(href="indoor.html").alsolike-box__content__item
                             img(src=imgPrefixUrl+"images/indoor.jpg" alt="Indoor")
                             h3 Sesiones Indoor
-                        a(href="/outdoor.html").alsolike-box__content__item
+                        a(href="outdoor.html").alsolike-box__content__item
                             img(src=imgPrefixUrl+"images/outdoor.jpg" alt="Outdoor")
                             h3 Sesiones Outdoor

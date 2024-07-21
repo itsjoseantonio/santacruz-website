@@ -37,7 +37,7 @@ html {
 .header-title {
     color: $white;
     text-align: center;
-    padding: 30px 0;
+    padding: 35px 0;
     background-image: url($imgPrefix + 'images/header-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -64,8 +64,8 @@ html {
         }
 
         @include max-tablet {
-            font-size: 64px;
-            line-height: 84px;
+            font-size: 60px;
+            line-height: 80px;
             padding: 0 30px;
             font-weight: 200;
         }
@@ -201,6 +201,7 @@ html {
         }
 
         &__item {
+            position: relative;
             overflow: hidden;
 
             &__image {
@@ -231,6 +232,7 @@ html {
         }
 
         &__item {
+            position: relative;
             overflow: hidden;
 
             &__image {
