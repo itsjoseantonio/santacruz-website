@@ -197,8 +197,8 @@
 
                     em {
                         @include max-tablet {
-                            font-size: 44px;
-                            line-height: 52px;
+                            font-size: 30px;
+                            line-height: 34px;
                         }
                     }
 
@@ -232,9 +232,9 @@
                         }
 
                         @include max-tablet {
-                            font-size: 28px;
-                            line-height: 32px;
-                            max-width: 180px;
+                            font-size: 20px;
+                            line-height: 22px;
+                            max-width: 300px;
                         }
                     }
                 }
@@ -252,7 +252,7 @@
 
                     strong {
                         display: block;
-                        max-width: 160px;
+                        max-width: 210px;
                     }
 
                     @include min-tablet {
@@ -263,7 +263,7 @@
                 .text-right {
                     text-transform: uppercase;
                     position: absolute;
-                    bottom: 0px;
+                    bottom: 20px;
                     right: 30px;
                     color: $white;
                     font-family: 'Montserrat';
@@ -589,9 +589,9 @@
 
                             p {
                                 text-align: right;
-                                font-size: 14px;
-                                line-height: 18px;
-                                max-width: 65%;
+                                font-size: 18px;
+                                line-height: 22px;
+                                max-width: 80%;
                                 font-family: 'Montserrat';
                                 font-style: italic;
                                 text-shadow: 1px 1px 5px #7e7e7e;
@@ -1958,13 +1958,64 @@
                             }
 
                             @include max-tablet {
-                                width: 120px;
+                                width: 90px;
                             }
 
                             @include max-phone {
-                                width: 80px;
+                                width: 70px;
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.credit-card {
+    color: $shadow-blue;
+    padding: 80px 0 10px;
+
+    @include max-phone {
+        padding: 60px 0 10px;
+    }
+
+    &__inner {
+        text-align: center;
+
+        @include max-phone {
+            padding: 0 20px;
+        }
+
+        h2 {
+            margin-bottom: 40px;
+            font-size: 36px;
+            line-height: 40px;
+
+            @include max-phone {
+                font-size: 24px;
+                line-height: 28px;
+            }
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            @include max-phone {
+                flex-wrap: wrap;
+                max-width: 220px;
+                margin: 0 auto;
+            }
+
+            li {
+                img {
+                    width: 100px;
+
+                    @include max-phone {
+                        width: 90px;
                     }
                 }
             }
@@ -2011,7 +2062,6 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    padding-left: 20px;
                     font-family: 'Montserrat';
                     font-style: italic;
 
@@ -2019,24 +2069,20 @@
                         min-height: 500px;
                     }
                     @include max-phone {
-                        min-height: 500px;
+                        min-height: 390px;
                         background-image: url($imgPrefix + 'images/home/contacto-home-mobile.jpg');
                     }
 
                     &__text {
                         font-size: 20px;
                         line-height: 28px;
-                        max-width: 40%;
-                        padding-left: 20px;
                         color: $white;
                         font-weight: 200;
-                        margin-top: -120px;
+                        text-align: center;
 
                         @include max-tablet {
                             font-size: 16px;
                             line-height: 20px;
-                            max-width: 40%;
-                            margin-top: -60px;
                         }
 
                         @include max-phone {
@@ -2057,11 +2103,14 @@
                             display: block;
                             font-size: 28px;
                             line-height: 32px;
+                            max-width: 400px;
+                            margin: 0 auto 30px;
 
                             @include max-tablet {
                                 font-size: 18px;
                                 line-height: 20px;
                                 margin-bottom: 15px;
+                                max-width: 250px;
                             }
                         }
 
@@ -2073,7 +2122,6 @@
                             @include max-tablet {
                                 font-size: 20px;
                                 line-height: 24px;
-                                max-width: 180px;
                             }
 
                             &.number {
@@ -2085,7 +2133,6 @@
                                 @include max-tablet {
                                     font-size: 30px;
                                     line-height: 34px;
-                                    max-width: 220px;
                                 }
                             }
                         }
@@ -2093,9 +2140,9 @@
                         ul {
                             display: flex;
                             align-items: center;
-                            justify-content: flex-start;
+                            justify-content: center;
                             gap: 10px;
-                            margin: 20px 0;
+                            margin: 30px 0;
 
                             @include max-tablet {
                                 margin: 15px 0;

@@ -4,6 +4,8 @@ block variables
 	- var imgPrefixUrl = IMG_PREFIX_URL
 	- var title = 'Santa Cruz Fotografía'
 	- var description = 'Fotógrafo de bodas en Lima especializado en hacerte lucir espectacular. Consigue imágenes únicas con Santa Cruz Fotografía. Reserva ahora.'
+	- var author = "Juan Pablo Santa Cruz"
+	- var image = imgPrefixUrl+"images/home/home-banner.png"
 
 block content
 	include ./partials/_navbar.pug
@@ -26,9 +28,9 @@ block content
 						span.quote-image__left
 						.quote-image__inner
 							img(src=imgPrefixUrl+"images/home/quote-photo.png" alt="")
-							p.text-desktop #[em es cierto], #[strong no tomamos] #[span fotos], es decir, #[small no como la mayoría]
-							p.text-left #[span es cierto], #[strong no tomamos fotos,]
-							p.text-right #[span es decir], #[strong no como la mayoría].
+							p.text-desktop #[em Porque cada] #[strong detalle importa] para contar #[small tu historia de amor]
+							p.text-left #[span Porque cada] #[strong detalle importa]
+							p.text-right #[span para contar] #[strong tu historia de amor]
 						p.quote-image__caption ¡Felicidades! vas a casarte con la persona que siempre soñaste, y si estás aquí, es porque el día de tu boda mereces imágenes que muestren mucho más que lo habitual. Estás aquí para soñar, para sonreír y compartir felicidad con tu familia y amigos. Y claro, nosotros estamos aquí, para que disfrutes de una experiencia irrepetible que llamamos fotografía de bodas.
 						span.quote-image__right
 
@@ -52,13 +54,13 @@ block content
 										p Hola, somos #[span Juan Pablo & Elizabeth] Santa Cruz
 										img(src=imgPrefixUrl+"images/iso-photo.png")
 									.weare-description__bottom
-										p Nos casamos en 2022, con el deseo de crear una marca capaz de cambiar el proceso habitual de hacer fotografía de bodas. Además, sabemos bien lo que es estar en tus zapatos.
+										p Somos una pareja de esposos con el deseo de cambiar el proceso habitual de hacer fotografía de bodas. Además, sabemos bien lo que es estar en tus zapatos.
 										p ¡Sobre todo en los de la novia!
 								.weare-description-mobile
 									p #[span Hola,] #[span somos] Juan Pablo & Elizabeth Santa Cruz
 									img(src=imgPrefixUrl+"images/iso-photo.png")
 						.weare-box__textMobile
-							p Nos casamos en 2022, con el deseo de crear una marca capaz de cambiar el proceso habitual de hacer fotografía de bodas. Además, sabemos bien lo que es estar en tus zapatos.
+							p Somos una pareja de esposos con el deseo de cambiar el proceso habitual de hacer fotografía de bodas. Además, sabemos bien lo que es estar en tus zapatos.
 							p ¡Sobre todo en los de la novia!
 		section.shine-section
 			.container
@@ -69,7 +71,7 @@ block content
 						.shine-box__subtitle
 							p Obtén una Sesión de Asesoría Fotográfica Gratuita.
 						.shine-box__contact
-							p Escríbenos para agendar una #[span fecha disponible, y descubre como] #[strong lucir increíble] en cada foto.
+							p Escríbenos para agendar una #[span cita disponible, y descubre como] #[strong lucir increíble] en cada foto.
 							ul
 								li
 									a(href="https://wa.me/+51992174324?text=Hola,%20quisiera%20más%20información" target="_blank") 
@@ -82,7 +84,7 @@ block content
 										img(src=imgPrefixUrl+"images/icons/icon-msn.png", alt="")
 		section.fav-section.header-title
 			h2 LOS FAVORITOS DE NUESTROS CLIENTES
-			p Explora lo más destacado de nuestra línea de producción artística.
+			p Explora nuestra exclusiva línea de producción artística.
 		
 		section.fotobook-section
 			.container
@@ -115,7 +117,7 @@ block content
 					.custom-content
 						img(src=imgPrefixUrl+"images/home/fondos-personalizados.png" alt="fondos personalizados").desktop
 						img(src=imgPrefixUrl+"images/home/fondos-personalizados-mobile-alt.png" alt="fondos personalizados").mobile
-						p Una exclusiva colección con increíbles fotos personalizadas y listas para instalarse como fondos de pantalla en todos tus dispositivos.
+						p Una increíble colección con fotos personalizadas y listas para instalarse como fondos de pantalla en todos tus dispositivos.
 		section.art-section
 			.container
 				.art-section__inner
@@ -143,7 +145,7 @@ block content
 		
 		section.client-section
 			.header-title
-				h2 LO QUE NUESTROS CLIENTES OPINAN
+				h2 LO QUE NUESTROS CLIENTES EXPRESAN
 			.container
 				.client-section__inner
 					.client-list
@@ -172,7 +174,7 @@ block content
 							img(src=imgPrefixUrl+"images/home/como-hacemos.jpg").desktop
 							img(src=imgPrefixUrl+"images/home/como-hacemos-mobile.jpg").mobile
 						.howdo-content__text
-							p De la misma forma en que todo expresa armonía en la naturaleza, comprueba como cada paquete que diseñamos para ti, se complementa con cada una de las 4 estaciones de nuestra plataforma creativa.
+							p Comprueba como cada paquete que diseñamos para ti, se complementa con cada una de las 4 estaciones de nuestra plataforma creativa.
 						.howdo-content__logo
 							img(src=imgPrefixUrl+"images/icons/logo-green.png" alt="Santa Cruz")
 		section.packages-section
@@ -184,7 +186,6 @@ block content
 							h3 encanto
 							.packages-list__item__detail
 								p Asesoría Fotográfica
-								p Sesión Pre Boda
 								p Boda Civil
 								p Boda Religiosa
 								p 1 Fotógrafo
@@ -228,6 +229,19 @@ block content
 							li
 								a(href="https://m.me/santacruzfografía" target="_blank")
 									img(src=imgPrefixUrl+"images/icons/icon-msn.png", alt="msn")
+		section.credit-card
+			.container
+				.credit-card__inner
+					h2 Aceptamos todas las tarjetas
+					ul
+						li
+							img(src=imgPrefixUrl+"images/icons/visa.png", alt="visa")
+						li
+							img(src=imgPrefixUrl+"images/icons/master.png", alt="mastercard")
+						li
+							img(src=imgPrefixUrl+"images/icons/amex.png", alt="amex")
+						li
+							img(src=imgPrefixUrl+"images/icons/diners.png", alt="diners")
 		section.contact-section
 			.container
 				.contact-section__inner
@@ -261,7 +275,7 @@ block content
 										a(href="mailto:contacto@santacruzfoto.com" target="_blank")
 											img(src=imgPrefixUrl+"images/icons/email-azul.png", alt="mail")
 									li
-										a(href="/" target="_blank")
+										a(href="https://m.me/santacruzfografía" target="_blank")
 											img(src=imgPrefixUrl+"images/icons/msn-azul.png", alt="msn")
 								span Escríbenos o llámanos
 								strong.number 

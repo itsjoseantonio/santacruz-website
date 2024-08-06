@@ -137,6 +137,13 @@
             &__left {
                 &.group-1 {
                     flex-basis: 70%;
+
+                    &.hidden-tablet {
+                        @include max-tablet {
+                            display: none;
+                        }
+                    }
+
                     @include max-tablet {
                         flex-basis: 100%;
                     }
@@ -144,12 +151,24 @@
 
                 &.group-3 {
                     flex-basis: 40%;
+
+                    &.hidden-tablet {
+                        @include max-tablet {
+                            display: none;
+                        }
+                    }
                 }
             }
 
             &__right {
                 &.group-1 {
                     flex-basis: 31%;
+
+                    &.hidden-tablet {
+                        @include max-tablet {
+                            display: none;
+                        }
+                    }
                 }
 
                 &.group-2 {
