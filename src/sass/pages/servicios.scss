@@ -53,6 +53,10 @@
 
             img {
                 width: 100%;
+                box-shadow: 14px 13px 24px #adadad;
+                display: block;
+                margin-bottom: 25px;
+                border-radius: 10px;
             }
 
             h2 {
@@ -104,6 +108,9 @@
 
             img {
                 max-width: 320px;
+                box-shadow: 14px 13px 24px #adadad;
+                margin-bottom: 25px;
+                border-radius: 10px;
             }
 
             h2 {
@@ -216,6 +223,10 @@
                     @include max-tablet {
                         width: 280px;
                     }
+
+                    @include max-phone {
+                        width: 100%;
+                    }
                 }
 
                 &:nth-child(2) {
@@ -235,6 +246,12 @@
                     }
                 }
 
+                &__image {
+                    @include max-phone {
+                        margin-right: -25px;
+                    }
+                }
+
                 img {
                     width: 100%;
                 }
@@ -249,6 +266,10 @@
                     @include max-tablet {
                         font-size: 25px;
                     }
+
+                    @include max-phone {
+                        padding-left: 15px;
+                    }
                 }
 
                 ul {
@@ -258,6 +279,10 @@
 
                     @include max-tablet {
                         max-width: 100%;
+                    }
+
+                    @include max-phone {
+                        padding-left: 15px;
                     }
 
                     li {

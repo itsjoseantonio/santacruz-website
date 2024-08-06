@@ -48,7 +48,7 @@
         @include max-phone {
             max-width: 160px;
             margin-left: -75px;
-            bottom: 80px;
+            bottom: 50px;
         }
 
         p {
@@ -312,12 +312,15 @@
                 line-height: 300px;
                 color: #e3e7e9;
                 display: inline-block;
-                height: 150px;
+                height: 200px;
+                width: 200px;
                 position: absolute;
                 z-index: 2;
                 top: 50%;
-                margin-top: -75px;
-                font-family: 'pertili';
+                margin-top: -100px;
+                background-image: url($imgPrefix + 'images/icon-quote.png');
+                background-size: 100%;
+                background-repeat: no-repeat;
 
                 @include max-tablet {
                     position: static;
@@ -329,23 +332,28 @@
                 @include max-phone {
                     font-size: 200px;
                     line-height: 200px;
-                    height: 100px;
+                    height: 160px;
+                    width: 160px;
                 }
             }
 
             &__left {
-                left: -180px;
+                left: -210px;
 
                 @include max-tablet {
                     margin-bottom: 40px;
+                    margin: 0 auto;
                 }
             }
 
             &__right {
-                right: -180px;
+                right: -210px;
+                transform: rotate(180deg);
+                margin-top: -160px;
 
                 @include max-tablet {
                     margin-top: 40px;
+                    margin: 0 auto;
                 }
             }
         }
@@ -679,7 +687,8 @@
     }
 
     @include max-phone {
-        background-position: left -200px center;
+        background-position: left center;
+        background-image: url($imgPrefix + 'images/home/shine-photo-mobile.jpg');
     }
 
     &__inner {
@@ -1859,7 +1868,7 @@
                         }
 
                         @include max-phone {
-                            margin-bottom: 40px;
+                            margin-bottom: 50px;
                         }
                     }
                 }
@@ -1881,6 +1890,7 @@
                         font-size: 36px;
                         line-height: 56px;
                         margin-bottom: 20px;
+                        height: auto;
                     }
                 }
 
@@ -2009,7 +2019,7 @@
                         min-height: 500px;
                     }
                     @include max-phone {
-                        min-height: 550px;
+                        min-height: 500px;
                         background-image: url($imgPrefix + 'images/home/contacto-home-mobile.jpg');
                     }
 
@@ -2128,6 +2138,15 @@
 
                         &.number {
                             font-size: 26px;
+                        }
+
+                        a {
+                            color: inherit;
+
+                            &:visited,
+                            &:active {
+                                color: inherit;
+                            }
                         }
                     }
 
