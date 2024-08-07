@@ -385,7 +385,7 @@
                     &:nth-child(1) {
                         @include max-tablet {
                             order: 1;
-                            width: 340px;
+                            width: 330px;
                         }
                     }
 
@@ -403,13 +403,22 @@
                     &:nth-child(3) {
                         @include max-tablet {
                             order: 2;
-                            width: 340px;
+                            width: 345px;
                             margin-right: -30px;
                         }
 
                         @include max-phone {
                             order: 3;
                             margin-top: 50px;
+                            margin-right: -40px;
+                        }
+
+                        img {
+                            max-width: 306px;
+
+                            @include max-tablet {
+                                max-width: 100%;
+                            }
                         }
                     }
 
