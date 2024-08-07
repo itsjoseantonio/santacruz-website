@@ -32,6 +32,12 @@ body {
     font-size: 16px;
 }
 
+.body {
+    &.fixed {
+        overflow: hidden;
+    }
+}
+
 html {
     height: 100%;
     -moz-osx-font-smoothing: grayscale;
