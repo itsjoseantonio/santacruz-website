@@ -249,6 +249,7 @@
                     font-style: italic;
                     font-weight: 400;
                     font-size: 20px;
+                    text-shadow: 1px 1px 5px #1e1e1e;
 
                     strong {
                         display: block;
@@ -271,6 +272,7 @@
                     font-weight: 400;
                     font-size: 20px;
                     text-align: right;
+                    text-shadow: 1px 1px 5px #1e1e1e;
 
                     strong {
                         display: block;
@@ -2068,9 +2070,14 @@
                     @include max-tablet {
                         min-height: 500px;
                     }
+
                     @include max-phone {
                         min-height: 390px;
                         background-image: url($imgPrefix + 'images/home/contacto-home-mobile.jpg');
+                    }
+
+                    @media screen and (max-width: 320px) {
+                        min-height: 300px;
                     }
 
                     &__text {
@@ -2203,6 +2210,14 @@
                         justify-content: center;
                         gap: 10px;
                         margin: 15px 0;
+
+                        li {
+                            a {
+                                img {
+                                    width: 60px;
+                                }
+                            }
+                        }
                     }
 
                     span {
